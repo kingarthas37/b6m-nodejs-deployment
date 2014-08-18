@@ -1,0 +1,63 @@
+{
+  "name": "tejia",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "supervisor ./bin/www"
+  },
+  "dependencies": {
+    "async": "^0.9.0",
+    "blueimp-md5": "^1.1.0",
+    "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "debug": "~0.7.4",
+    "express": "~4.2.0",
+    "express-hbs": "^0.7.10",
+    "local-cache": "^0.*.*",
+    "local-cms-api": "^0.*.*",
+    "local-pager": "^0.*.*",
+    "memcached": "^0.2.8",
+    "morgan": "~1.0.0",
+    "randomstring": "^1.0.3",
+    "request": "^2.36.0",
+    "static-favicon": "~1.0.0",
+    "underscore": "^1.6.0"
+  },
+  "api": {
+    "tejia": {
+      "base_url": "http://cms-api.b5m.com/tejia/index.php",
+      "actions": {
+        "channel": "get_channel_list",
+        "channelGoodsList": "get_channel_goods_list",
+        "goodsDetail": "get_goods_detail",
+        "recommandGoodsList": "get_recommand_goods_list",
+        "indexBrandList": "get_index_brand_list",
+        "indexGoodsList": "get_index_goods_list",
+        "getCategoryList": "get_category_list",
+        "getGoodsCommentList": "get_goods_comment_list",
+        "searchGoodsList": "get_search_goods_list",
+        "getBrandFloorList": "get_brand_floor_list",
+        "getCountdownBrandList": "get_countdown_brand_list",
+        "getNoticeBrandList": "get_notice_brand_list",
+        "channelBanner": "get_channel_banner",
+        "brandpageProductList": "get_brandpage_product_list",
+        "brandBannerLeft": "get_brand_banner",
+        "brandBannerRight": "get_brand_banner",
+        "bigBrand": "get_big_brand"
+      }
+    },
+    "user": {
+      "base_url": "http://cms-api.b5m.com/user/index.php",
+      "actions": {
+        "userById": "get_user_by_uid"
+      }
+    }
+  },
+  "cache": {
+    "host": "10.10.100.15",
+    "port": "11311",
+    "prefix": "tejia",
+    "disable": true
+  },
+  "devDependencies": {}
+}

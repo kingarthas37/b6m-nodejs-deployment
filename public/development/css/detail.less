@@ -1,0 +1,710 @@
+.wc-detail{
+  width:980px;
+  margin:0px auto 20px auto;
+}
+.wc-detail-l{
+  width:761px;
+  float:left;
+  display: inline;
+      .crumbs{
+        padding:20px 0px;
+        a,span{
+          padding-left: 5px;
+          color: #000;
+        }
+      }
+  .detail-view{
+    width:761px;
+        .view-img{
+          width:351px;
+          height:351px;
+          border:1px solid #dddddd;
+          float: left;
+          display: inline;
+          overflow: hidden;
+          text-align: center;
+          img{
+            max-height: 100%;
+            max-width: 100%;
+          }
+         }
+        .view-text{
+          width:388px;
+          margin-left: 18px;
+          float: left;
+          display: inline;
+             .caption{
+               font-family: "Microsoft YaHei";
+               font-size: 18px;
+               color: #333;
+               padding-bottom: 7px;
+             }
+            .hr{
+               width:100%;
+               background: url("../images/_sprite/wc-hr.png?__sprite")  repeat-x 0 0;
+               height: 1px;
+             }
+             .panels{
+                margin-top: 25px;
+                background: url("../images/_sprite/wc-panels.png?__sprite")  no-repeat 0 0;
+                width:334px;
+                height: 74px;
+                padding: 19px 30px 2px 25px;
+                position:relative;
+                   .direct-buy{
+                     position: absolute;
+                     right:0px;
+                     top:-20px;
+                     color:#666;
+                     &:hover{
+                       color:#ff8f22;
+                     }
+                   }
+                   .price{
+                     float:left;
+                     display: inline;
+                     width:197px;
+                     display: inline-block;
+                     .def-price{
+                       font-family: "Microsoft YaHei";
+                       font-size: 30px;
+                       line-height: 30px;
+                       color:#fff;
+                       font-weight: bold;
+                       width:100%;
+                       float:left;
+                       display: inline;
+                     }
+                     del{
+                       float:left;
+                       display: inline;
+                       font-size: 18px;
+                       font-weight: normal;
+                       font-family: "Microsoft YaHei";
+                       color:#d8d8d8;
+                       margin-left: 6px;
+                     }
+                     .discount{
+                       background: url("../images/_sprite/wc-discount.png?__sprite") no-repeat 0 0;
+                       color: #ea2e2e;
+                       display: inline;
+                       float: left;
+                       height: 19px;
+                       margin-left: 5px;
+                       margin-top: 3px;
+                       text-align: center;
+                       width: 58px;
+                     }
+                   }
+
+               .howmany{
+                 float:left;
+                 display: inline;
+                 padding:10px 0px;
+                 color:#fff;
+                 .num{
+                   color:#eeca5c;
+                   padding:0px 8px;
+                 }
+               }
+             }
+          .btn-buy-wrap{
+            margin: 20px 0px;
+
+
+            .btn-buy{
+              float:right;
+              display: inline;
+              margin-left:25px;
+              height: 44px;
+              line-height: 44px;
+              font-family: "Microsoft YaHei";
+              font-size: 21px;
+              color: #e96d13;
+              text-align: center;
+              border-radius: 4px;
+              cursor: pointer;
+              width:174px;
+              box-shadow: 0 2px 0px #fcc88c;
+              border:0 none;
+              border:none;
+              text-shadow:0px 2px #fff1c5;
+              display: inline-block;
+              margin-bottom: 7px;
+              text-indent: 53px;
+              background:#ffe4a3  url("../images/btn_buy.png") no-repeat 28px 9px;
+            }
+            .btn-SellAbroad{
+              float:left;
+              display: inline;
+              position: relative;
+
+              width:187px;
+              height: 44px;
+              font-family: "Microsoft YaHei";
+              font-size: 21px;
+              line-height: 44px;
+              color: #fff;
+              text-indent: 68px;
+              border-radius: 4px;
+              cursor: pointer;
+              background:#ff8f22 ;
+              box-shadow: 0 2px 0px #df7c56;
+              border:0 none;
+              border:none;
+              text-shadow:0px 2px #db6f17;
+              display: inline-block;
+              margin-bottom: 7px;
+              span{
+                background: url("../images/_sprite/btn-sellabroad.png?__sprite") no-repeat 0px 0px;
+                width:51px;
+                height:54px;
+                position: absolute;
+                left: 9px;
+                top:-16px;
+              }
+            }
+          }
+          .count-time{
+             margin:20px auto;
+            clear:both;
+            font-family: "Microsoft YaHei";
+            font-size: 16px;
+            color:#666666;
+            span{
+              padding:0px 3px;
+            }
+          }
+        }
+  }
+  .view-introduce{
+    width:100%;
+    margin: 49px auto 0px auto;
+    .convert-wrap{
+      width:100%;
+      border-bottom: 1px solid #ededed;
+      height: 30px;
+      margin-bottom: -1px;
+      background: #fff;
+      .un-tab {
+        display: none;
+        float: right;
+        line-height: 31px;
+        height: 31px;
+        .bk-btn {
+          display: block;
+          margin-left: 5px;
+          width: 88px;
+          font-size: 13px;
+          height: 26px;
+          line-height: 27px;
+          font-family: Microsoft YaHei;
+          display: inline-block;
+          margin: 0;
+
+          text-align: center;
+          border-radius: 3px;
+          box-shadow: 0 1px 0 #dc8760;
+          color: white;
+          background: #e96d13;
+        }
+        .bk-btn.orange {
+          background: #fcad51;
+        }
+      }
+    }
+    .convert-wrap.fixed{
+      .un-tab{
+        display: block;
+      }
+    }
+    .convert{
+      float: left;
+      display: inline;
+      height:30px;
+      border-top: 0px solid #ededed;
+      border-left: 1px solid #ededed;
+      border-right: 1px solid #ededed;
+      border-bottom: 0px solid #ededed;
+      li{
+        height: 28px;
+        width: 98px;
+        text-align: center;
+        background-color:#f0f0f0 ;
+        border-top: 1px solid #ededed;
+        border-left: 1px solid #ededed;
+        border-right: 1px solid #ededed;
+        border-bottom: 0px solid #ededed;
+        top:1px;
+        color:#333 ;
+        float: left;
+        display: inline;
+        line-height: 28px;
+        position: relative;
+        cursor: pointer;
+      }
+      li.current{
+        background-color:#fff ;
+        border-top: 3px solid #ea2e2e;
+        border-left: 0px solid #ea2e2e;
+        border-right: 0px solid #ea2e2e;
+        border-bottom: 0px solid #ededed;
+        height: 26px;
+        width: 98px;
+        color: #757575;
+        line-height: 26px;
+
+      }
+    }
+    .cap{
+      font-size: 16px;
+      height: 40px;
+      font-family: Microsoft YaHei;
+      font-weight: bold;
+      color: #666;
+      line-height: 40px;
+      background: #fff9f2;
+
+      margin:5px auto;
+      padding-left: 18px;
+      clear:both;
+    }
+    .invtroduce-detail{
+      width: 761px;
+      border:1px solid #ededed;
+      float: left;
+      display: inline;
+      clear:both;
+      margin-top:-2px;
+      overflow: hidden;
+
+     .deatil-list{
+       width:759px;
+       border:1px solid #ededed;
+       margin-top: 3px;
+        li{
+         width:252px;
+         height: 352px;
+          float: left;
+          display: inline;
+          margin-top: 0px;
+          margin-right: 0px;
+          border-bottom:1px solid #ededed;
+          border-right:1px solid #ededed;
+          &:hover{
+
+            border:2px solid #f56f47;
+
+            margin: -2px -1px -1px -2px;
+            /*box-shadow: 0px 0px 2px 2px #e8e8e8;*/
+          }
+          .top-link{
+            width: 232px;
+            height: 240px;
+            overflow: hidden;
+            display: block;
+            margin-top: 10px;
+            margin-left: 10px;
+            img{
+                max-height: 100%;
+                max-width: 100%;
+                display: block;
+                margin: 0 auto;
+            }
+          }
+          .dir{
+            margin: 0 10px;
+            overflow: hidden;
+          }
+          .name{
+            height: 35px;
+            a{
+              color:#333;
+              &:hover{
+                color:#eb7e00;
+              }
+            }
+
+          }
+          .price{
+            font-family: "Microsoft YaHei";
+            font-size: 14px;
+            color:#ff4400;
+            float: left;
+            display: inline;
+            .num{
+               font-family: "Tahoma";
+               font-size: 20px;
+               font-weight: bold;
+            }
+          }
+          .discount{
+            float: left;
+            display: inline;
+            background: #fdc439;
+            padding:1px 3px;
+            color:#ed422f;
+            margin-left: 10px;
+            margin-top: 4px;
+          }
+          .howmany{
+            margin-top: 4px;
+            float: right;
+            display: inline;
+            color:#666;
+          }
+          del{
+            float: left;
+            display: inline;
+            color: #888;
+            font-size: 14px;
+            font-family: "Microsoft YaHei";
+            margin-top: -5px;
+            margin-left: 3px;
+            .num{
+              font-family: "Tahoma";
+            }
+          }
+       }
+     }
+      .talk{
+        width: 760px;
+
+        margin: 19px auto 0px auto;
+        clear:both;
+
+            .comment{
+              overflow: hidden;
+              border: 1px solid #eeeeee;
+
+              .title{
+                height: 36px;
+                line-height: 36px;
+                background-color:#f9f9f9 ;
+                margin:0 auto;
+                border-bottom: 1px solid #eeeeee;
+                .h3{
+                  color:#333;
+                  float: left;
+                  display: inline;
+                  margin-left:12px;
+                  font-family: "microsoft yahei";
+                  font-size: 16px;
+                }
+
+                .commit{
+                  color:#ea2e2e;
+                  margin: 0px 5px;
+                }
+              }
+              .usericon{
+                float: left;
+                display: inline;
+                width:80px;
+                margin-right: 18px;
+                  .icon{
+                    width:80px;
+                    height: 80px;
+                    clear:both;
+                    margin:0 auto;
+                  }
+                 .autolink{
+                    padding:10px 0px;
+                    clear: both;
+                    text-align: center;
+                   display: block;
+                     a{
+                       margin:0px 3px;
+                     }
+                 }
+              }
+              .usertext{
+                float: left;
+                display: inline;
+                width:606px;
+                height:68px ;
+                margin: 0 auto;
+                border:1px solid #b5b5b5;
+
+                resize: none;
+                padding: 5px;
+                line-height: 150%;
+              }
+              .content,.content2{
+                padding: 20px;
+                clear:both;
+                overflow: hidden;
+                    .comment-line{
+                      padding: 15px 0px 20px 0px;
+                      overflow: hidden;
+                      border-bottom:1px dotted #b5b5b5;
+                      .user-say{
+                        width:648px;
+                        float:left;
+                        display: inline;
+                        margin-left:18px;
+                          .top{
+                            padding-top: 5px;
+                            position:relative;
+                            .lou{
+                              position: absolute;
+                              right:8px;
+                              top:5px;
+                              color:#999999;
+                            }
+                          }
+                         .said{
+                           padding-top: 5px;
+                           color:#333;
+                         }
+                        .nm{
+                          color:#f4ac00;
+                        }
+                        .date{
+                          color:#999999;
+                          margin-left: 16px;
+                        }
+                      }
+                      .user-pic{
+                        width:50px;
+                        height: 50px;
+                        float:left;
+                        display: inline;
+
+                      }
+                    }
+              }
+              .content2{
+                padding: 0px 20px 20px 20px;
+                margin-top: -10px;
+              }
+            }
+        .input-num{
+          float: right;
+          display: inline;
+          margin-right: 12px;
+          color:#999;
+          padding: 10px 0px;
+          line-height: 21px;
+          strong{
+            color: #eb473b;
+          }
+        }
+        .btn-reply{
+          width:66px;
+          padding: 0px 0px 2px 0px;
+          line-height: 21px;
+          color:#fff;
+          background: #fa3e3e;
+          text-align: center;
+          margin-top: 10px;
+          border:0 none;
+          border:none;
+          cursor: pointer;
+          float: right;
+          display: inline;
+        }
+      }
+
+    }
+    .bm-buy{
+
+      width: 700px;
+      height: 46px;
+      line-height: 46px;
+      margin-top:15px;
+      background: url("../images/_sprite/wc-bm-panels.png?__sprite")  no-repeat 0 0;
+      padding:28px 20px 43px 39px;
+      .howmany{
+        font-family: "Microsoft YaHei";
+        font-size: 18px;
+        font-weight: bold;
+        color: #ebebeb;
+        float: left;
+        display: inline;
+        width: 220px;
+        .num{
+          font-family: "Tahoma";
+          font-size: 30px;
+          color:#fccb36;
+          padding: 0px 5px;
+        }
+      }
+      del{
+        float: left;
+        display: inline;
+        font-family: "Microsoft YaHei";
+        font-size: 18px;
+        color: #ebebeb;
+        .num{
+          font-family: "Tahoma";
+          font-size: 18px;
+        }
+      }
+      .discount{
+        background: url("../images/_sprite/wc-discount.png?__sprite") no-repeat 0 0;
+        color: #ea2e2e;
+        display: inline;
+        float: left;
+        height: 19px;
+        margin-left: 12px;
+        margin-top: 15px;
+        line-height: 19px;
+        text-align: center;
+        width: 58px;
+      }
+      .def-price{
+        color: #fff;
+        display: inline;
+        float: left;
+        font-family: "Microsoft YaHei";
+        font-size: 30px;
+        font-weight: bold;
+        width: 149px;
+        margin-left: 35px;
+      }
+      .btn-buy{
+        background: none repeat scroll 0 0 #fccb36;
+        border: medium none;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px #df9d48;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        float: left;
+        font-family: "Microsoft YaHei";
+        font-size: 24px;
+        height: 44px;
+        line-height: 44px;
+        margin-bottom: 7px;
+        text-align: center;
+        text-shadow: 0 2px #e9a010;
+        width: 131px;
+        margin-left: 11px;
+      }
+    }
+    .no{
+      border:0 none;
+      border:none;
+
+    }
+  }
+}
+.wc-detail-r{
+  width:206px;
+  float:left;
+  display: inline;
+  margin-left: 13px;
+  position: relative;
+  .title{
+    color:#414141;
+    padding: 20px 0px;
+  }
+  .boutique{
+    width:204px;
+    margin-top:-10px;
+    li{
+      height: 288px;
+      width:204px;
+      border:1px solid #ededed;
+      background-color: #fff;
+        .btn-buy {
+          background-color: #ff4400;
+          border-radius: 3px;
+          float: right;
+          display: none;
+          color: #fff;
+          font-family: "Microsoft YaHei";
+          font-size: 14px;
+          height: 24px;
+          line-height: 23px;
+          text-align: center;
+          margin-top: 3px;
+          width: 65px;
+        }
+
+      &:hover{
+        border:2px solid #f56f47;
+        margin: -1px -1px ;
+
+        border-radius: 2px;
+        position: relative;
+        /*box-shadow: -2px 6px 7px  5px #e8e8e8;*/
+        .btn-buy {
+          display: inline;
+        }
+      }
+
+      .top-link{
+        width:194px;
+        height: 194px;
+        overflow: hidden;
+        display: block;
+        margin-left: 5px;
+        margin-top: 5px;
+        img{
+          display: block;
+          margin: 0 auto;
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+      .dir{
+        margin: 0 5px;
+        overflow: hidden;
+      }
+      .name{
+        height: 35px;
+        a{
+          color:#333;
+          &:hover{
+            color:#eb7e00;
+          }
+        }
+
+      }
+      .price{
+        font-family: "Microsoft YaHei";
+        font-size: 14px;
+        color:#ff4400;
+        float: left;
+        display: inline;
+        font-weight: bold;
+        margin-top: 3px;
+        .num{
+          font-family: "Tahoma";
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+      .discount{
+        float: left;
+        display: inline;
+        background: #ff4400;
+        padding:1px 3px;
+        color:#fff;
+        margin-left: 10px;
+        margin-top: 4px;
+      }
+      .howmany{
+        margin-top: 4px;
+        float: right;
+        display: inline;
+        color:#666;
+      }
+      del{
+        float: left;
+        display: inline;
+        color: #888;
+        font-size: 12px;
+        font-family: "Microsoft YaHei";
+        margin-top: -4px;
+        margin-left: 3px;
+        .num{
+          font-family: "Tahoma";
+        }
+      }
+    }
+
+  }
+}

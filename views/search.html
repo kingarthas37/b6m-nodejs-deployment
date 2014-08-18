@@ -1,0 +1,77 @@
+<div class="taotejia-content">
+
+
+
+
+     <span class="ttj-cont-search">
+           {{#if searchGoodsList.data}}
+        <a href="/">首页</a>&gt;
+        <span>搜索&nbsp;“<dfn>{{keyword}}</dfn>”</span>
+            {{else}}糟糕，没有找到<strong>"{{keyword}}"</strong>相关商品 <strong><a href="/">去首页看看></a></strong>
+
+         <p style="padding-top:10px; font-size:14px; font-weight: bold;">看看最人气的9.9包邮</p>
+    {{/if}}
+    </span>
+
+
+<div class="taote-content-list">
+
+<ul>
+
+
+
+{{#if searchGoodsList.data}}
+
+{{#each searchGoodsList.data}}
+    <li class="extra{{#if tag}}{{tag}}{{/if}}">
+        <p class="cont-lis-lcon">
+            <span class="cont-list-gree"></span>
+            <span class="cont-list-red"></span>
+        </p>
+        <a class="cont-list-img" href="{{Url}}" target="_blank"><img src="{{IndexImage}}"  /></a>
+        <a class="cont-list-link" href="{{Url}}" target="_blank" title="{{Title}}">{{Title}}</a>
+        <div class="cont-list-below">
+            <span class="below-price"><dfn>&yen;</dfn>{{Price}}<span class="below-zhekou">{{discount-helper Price OriginalPrice}}折</span></span>
+            <span class="original-price"><dfn>&yen;{{OriginalPrice}}</dfn></span>
+            <span class="below-renshu"><strong>{{Sales}}</strong>人已买</span>
+            <a class="cont-list-buy" target="_blank" href="{{buy_link}}">立即购买</a>
+        </div>
+    </li>
+   {{/each}}
+
+    {{else}}
+
+
+    {{#each channelGoodsList.data}}
+
+    <li class="extra{{#if tag}}{{tag}}{{/if}}">
+        <p class="cont-lis-lcon">
+            <span class="cont-list-gree"></span>
+            <span class="cont-list-red"></span>
+        </p>
+        <a class="cont-list-img" href="/detail/{{id}}" target="_blank"><img src="{{index_image}}" /></a>
+        <a class="cont-list-link" href="/detail/{{id}}" target="_blank" title="{{name}}">{{name}}</a>
+        <div class="cont-list-below">
+            <span class="below-price"><dfn>&yen;</dfn>{{price}}<span class="below-zhekou">{{discount-helper price old_price}}折</span></span>
+            <span class="original-price"><dfn>&yen;{{old_price}}</dfn></span>
+            <span class="below-renshu"><strong>{{sales}}</strong>人已买</span>
+            <a class="cont-list-buy" target="_blank" href="{{buy_link}}">立即购买</a>
+        </div>
+    </li>
+    {{/each}}
+
+    {{/if}}
+
+
+
+</ul>
+
+
+    {{#if searchGoodsList.data}}
+{{pager pager}}
+    {{/if}}
+
+</div>
+</div>
+
+        <br/>

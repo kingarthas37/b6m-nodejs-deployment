@@ -1,0 +1,118 @@
+<div class="tao-tejia-nav" id="Fixed_top">
+    <p>
+        <span class="ttj-fixd-tit">每日<b>9</b>点更新</span>
+        <span class="ttj-fixd-list">
+            {{leftbar getCategoryList curCategory}}
+        </span>
+        <span class="boutique-recommend">精品推荐</span>
+        <!--<span class="ttj-fixd-link">
+            <a href="">九块九包邮</a>
+            <a href="">品牌特卖</a>
+            <a href="">超级降价</a>
+            <a href="">明日预告</a>
+            <em></em>
+        </span>-->
+    </p>
+</div>
+
+<div class="tao-tejia-advert">
+    <a target="_blank" href="http://stats.b5m.com/redirect.html?t=1&target=http%3A%2F%2Fe.cn.miaozhen.com%2Fr.gif%3Fk%3D1014803%26p%3D4-UJg0%26rt%3D2%26o%3Dhttp%3A%2F%2Funion.suning.com%2Faas%2Fopen%2FvistorAd.action%3FuserId%3D16947%26webSiteId%3D0%26adInfoId%3D00%26adBookId%3D0%26subUserEx%3Dttj%26vistURL%3Dhttp%3A%2F%2Fsale.suning.com%2Fimages%2Fadvertise%2Fzyn%2F2014818zthd%2Findex.html%26utm_source%3Ddl-b5m%26utm_medium%3Dttj" class="taotejia-head-pic"></a>
+
+</div>
+
+
+<div class="taotejia-content">
+
+
+<p class="taotj-cont-tit cfx">
+    <span class="taotj-brand"><b>精</b>选品牌</span>
+    <span class="taotj-tit-pic"></span>
+</p>
+<div class="taotj-image-rotation">
+    <a class="image-rotation-l" href=""></a>
+    <a class="image-rotation-r" href=""></a>
+    <ul>
+        {{#each indexBrandList}}
+        <li>
+            <a target="_blank" href="{{brand_url}}"><img src="{{brand_img}}"><label><b>{{discount}}</b></label></a>
+            <p>
+                <span class="lispan-l" title="{{brand_name}}">{{brand_name}}</span>
+                <span class="lispan-r" time start="{{gettime}}" end="{{gettime end_time}}"><em></em><dfn>00</dfn>天<dfn>00</dfn>时<dfn>00</dfn>分<dfn>00</dfn>秒</span>
+            </p>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+
+
+    <a name="item"></a>
+<p class="taotj-cont-tit cfx">
+    <span class="taotj-brand"><b>今</b>日特价</span>
+        <span class="taotj-nav">
+            {{sort-index sort field curCategory}}
+        </span>
+       <!-- <span class="taotj-top-dow">
+            <a class="taotj-topdow-l" href="/?page={{page-minus pager.page}}"></a>
+            <label>{{pager.page}}/{{pager.pageNum}}</label>
+            <a class="taotj-topdow-r" href="/?page={{page-plus pager.page}}"></a>
+        </span>-->
+</p>
+
+
+<div class="taote-content-list">
+
+    <ul>
+        {{#each indexGoodsList.data}}
+        <li class="extra{{#if tag}}{{tag}}{{/if}}">
+            <p class="cont-lis-lcon">
+                <span class="cont-list-gree"></span>
+                <span class="cont-list-red"></span>
+            </p>
+            <a class="cont-list-img" href="/detail/{{id}}" target="_blank"><img src="{{index_image}}"   /></a>
+            <a class="cont-list-link" href="/detail/{{id}}" target="_blank" title="{{name}}">{{name}}</a>
+            <div class="cont-list-below">
+                <span class="below-price"><dfn>&yen;</dfn>{{price}}<span class="below-zhekou">{{discount-helper price old_price}}折</span></span>
+                <span class="original-price"><dfn>&yen;{{old_price}}</dfn></span>
+                <span class="below-renshu"><strong>{{sales}}</strong>人已买</span>
+                <a class="cont-list-buy" target="_blank" href="{{buy_link}}">立即购买</a>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+
+    {{pager pager}}
+
+</div>
+</div>
+
+{{#contentFor 'pageScripts'}}
+<script type="text/javascript">
+
+    $(function(){
+
+        taoInit.index();
+
+        //滚动加载
+        var pageCount = 1;
+        $(window).scroll(function() {
+            var scroll = (document.documentElement.scrollTop || document.body.scrollTop || 0) + (document.documentElement.clientHeight || document.body.clientHeight || 0),
+                 height = document.documentElement.scrollHeight || document.body.scrollHeight || 0 ;
+
+
+          /* if(height - scroll <=100 && pageCount < 4) {
+               pageCount ++;
+               $.ajax({
+                   url: "index.html",
+                   data: "page_count=" + pageCount,
+                   success: function(data){
+                      console.log(data);
+                   }
+               });
+
+           }*/
+        });
+
+    });
+
+</script>
+{{/contentFor}}

@@ -1,0 +1,117 @@
+{{!< client}}
+
+<input type="hidden" id="hourHidden" name="hourHidden" value="13" />
+<div class="tab-mod">
+    <ul class="nav">
+        <li class="item">
+
+
+		    <span><a href="javascript:;" id="prices">{{#if selectChannel}}{{selectChannel}}{{else}}所有特价{{/if}}</a></span>
+
+
+            <ul class="item-list">
+                <li class="cur"><a href="?channel=">所有特价</a></li>
+                  {{#each channel}}
+                    <li><a href="?channel={{id}}">{{name}}</a></li>
+                  {{/each}}
+            </ul>
+
+        </li>
+
+        <li class="item">
+
+				<span>
+					<a href="javascript:;">{{#if selectCategory}}{{selectCategory}}{{else}}全部{{/if}}</a>
+				</span>
+
+            <ul class="item-list">
+                <a href="?category_id=&channel={{curChannel}}">全部</a>
+                {{#each getCategoryList}}
+                  <a href="?category_id={{id}}&channel={{../curChannel}}">{{name}}</a>
+                {{/each}}
+            </ul>
+
+        </li>
+
+        <li class="item">
+		    <span><a href="javascript:;">{{selectField}}</a></span>
+            <ul class="item-list">
+                <li><a href="?field=&category_id={{curCategory}}&channel={{curChannel}}&sort=">最新</a></li>
+                <li><a href="?field=sales&category_id={{curCategory}}&channel={{curChannel}}&sort=">人气</a></li>
+                <li><a href="?field=price&category_id={{curCategory}}&channel={{curChannel}}&sort=asc">折扣</a></li>
+            </ul>
+        </li>
+
+    </ul>
+
+    <div class="mod">
+
+
+
+      {{#if curChannel}}
+
+
+        <div class="pic-slider">
+            <ul>
+                {{#each channelGoodsList.data}}
+                <li>
+                    <h3 class="name">
+                        <a href="/detail/{{id}}" target="_blank">{{name}}</a>
+                    </h3>
+                    <div class="photo">
+                        <a href="/detail/{{id}}" target="_blank"><span><img src="{{index_image}}" alt="{{name}}" /></span></a>
+                    </div>
+                    <div class="now">
+                        <span class="price"><small>&yen;</small>{{price}}</span>
+                        <a  href="/detail/{{id}}" target="_blank" class="btn">去看看</a>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+            <p class="pagination cf"></p>
+            <a class="pic-slider-per"></a>
+            <a class="pic-slider-next"></a>
+        </div>
+
+     {{else}}
+
+
+
+            <div class="pic-slider">
+                <ul>
+                    {{#each indexGoodsList.data}}
+                    <li>
+                        <h3 class="name">
+                            <a href="/detail/{{id}}" target="_blank">{{name}}</a>
+                        </h3>
+                        <div class="photo">
+                            <a href="/detail/{{id}}" target="_blank"><span><img src="{{index_image}}" alt="{{name}}" /></span></a>
+                        </div>
+                        <div class="now">
+                            <span class="price"><small>&yen;</small>{{price}}</span>
+                            <a  href="/detail/{{id}}" target="_blank" class="btn">去看看</a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+                <p class="pagination cf"></p>
+                <a class="pic-slider-per"></a>
+                <a class="pic-slider-next"></a>
+            </div>
+     {{/if}}
+
+
+
+    </div>
+</div>
+
+
+
+{{#contentFor 'pageScripts'}}
+<script type="text/javascript">
+    var countPageNumber = '1651';
+    var priceField = '0.0';
+    var category = '0';
+    var sort = 'jingpin';
+</script>
+{{/contentFor}}

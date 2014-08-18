@@ -1,0 +1,91 @@
+
+<!-- bigimg -->
+<div class="wc-top-wp">
+    <div class="top-show">
+        <div class="top-showin">
+            <img src="{{brandpageProductList.brand_result.brand_big_img}}"/>
+        </div>
+    </div>
+</div>
+<!-- bigimg end -->
+<!-- countdown -->
+<div class="wp-countdown">
+    <div class="hd">hust 美丽组合</div>
+    <div class="time-bars">
+        <span class="fl">还剩:</span>
+        <div class="fl" id="time" time start="{{gettime}}" end="{{brandpageProductList.brand_result.end_time}}">
+            <em></em><dfn>00</dfn>天<dfn>00</dfn>时<dfn>00</dfn>分<dfn>00</dfn>秒
+        </div>
+    </div>
+    <div class="dis">
+        1-3<span class="zi">折</span>
+    </div>
+</div>
+<!-- countdown end-->
+<!-- category-nav -->
+<div class="category-nav">
+
+    <div class="sort">
+        <div class="sort-in">
+            <div class="t">商品排行</div>
+            {{sort-brand-detail brandId sort field stock}}
+        </div>
+        <div class="sort-in{{#if stock}} on{{/if}}">
+          <a href="/brand/detail/{{brandId}}?stock={{#if stock}}{{else}}1{{/if}}" class="def2">只显示有货商品</a>
+        </div>
+    </div>
+
+</div>
+
+<!--failure-->
+
+<div class="wp2">
+    <div class="category-wp">
+
+       {{#each brandpageProductList.goods_result}}
+
+        <div class="items">
+            <a class="top" target="_blank" href="{{link}}">
+                <img src="{{index_image}}" />
+                <span class="over">已抢完</span>
+            </a>
+            <div class="bm">
+                <div class="links">
+                    <a href="{{link}}">{{content}}</a>
+                </div>
+                <div class="info">
+		    <span class="pri">
+			 <span class="f-rmb">￥</span>
+			 <span class="f-pink">{{price}}</span>
+			</span>
+                    <span class="f-dis">{{discount}}折</span>
+                    <del class="f-del"><span class="f-rmb">￥</span>{{old_price}}</del>
+                </div>
+            </div>
+            <div class="cover"></div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>
+<!--categoty end-->
+
+{{pager pager}}
+<!--banner-->
+<div class="wp2">
+    <div class="banner-wp">
+        <a class="banner" href="{{brandBannerLeft.link}}"><img src="{{brandBannerLeft.image_url}}" /></a>
+        <a class="banner" href="{{brandBannerRight.link}}"><img src="{{brandBannerRight.image_url}}" /></a>
+    </div>
+</div>
+
+
+<br/>
+
+{{#contentFor 'pageScripts'}}
+<script>
+    $(function(){
+        taoInit.brandDetail();
+    });
+</script>
+{{/contentFor}}

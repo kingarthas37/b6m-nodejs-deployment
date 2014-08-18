@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{Title}}</title>
+    <meta name="keywords" content="{{Keywords}}" />
+    <meta name="description" content="{{Description}}" />
+
+    {{#if IS_PROD}}
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    {{/if}}
+
+    <link rel="shortcut icon" href="http://staticcdn.b5m.com/proj/cms-bbs/images/favicon.ico" type="image/x-ion"/>
+    <link rel="stylesheet" href="http://staticcdn.b5m.com/css/common/common.css?v={{VERSION}}" />
+
+    {{#if IS_DEBUG}}
+    {{#assetsmap ASSETS_MAP.pkg.p0.has}}{{/assetsmap}}
+    {{else}}
+    <link rel="stylesheet" href="{{ASSETS_MAP.pkg.p0.uri}}" />
+    {{/if}}
+
+
+
+</head>
+
+<body>
+
+
+<div class="top-hdbanner"></div>
+<div class="tpbar"></div>
+
+<div class="header">
+    <div class="header-box cfx">
+        <h1 class="header-logo fl">
+            <a href="/" title="帮5买"><img src="http://staticcdn.b5m.com/images/logos/tejia.png" width="130" height="74" alt="帮5买-淘特价"></a>
+        </h1>
+
+        <div class="logo-banner" data-mps="21045">
+            <a href="http://www.b5m.com/qwdh.html"><img width="80" height="80" alt="" src="http://cdn.bang5mai.com/upload/web/cmsphp//link/201408/d80e6b5d0e0117202633.jpg"></a>
+        </div>
+
+        <div class="header-tools-search">
+            <span class="header-search-content">
+              <!--  <form id="formid" action='/shanghai/__[##]' method="post" target="_self">-->
+                    <label for="搜全网">搜索从这里开始</label>
+                    <input id="query" type="text" data-attr='1005' class="header-search-key J_search J_autofill" value="" placeholder="快速搜索 全网比价">
+                    <input type="button" data-attr='1005' class="header-rearch-submit" value="搜全网">
+                  <!--  <input type="submit" style="display:none">-->
+              <!--  </form>-->
+            </span>
+        </div>
+
+        <div class="top-hot-key"></div>
+
+    </div>
+    <div class="header-nav-box">
+        <div class="wp">
+            <div class="header-nav-back">
+                <a data-attr="1004" href="http://www.b5m.com/" title="帮5买首页" class="icon"><u>帮5买首页</u></a>
+                <s class="header-nav-back-s2"></s><s></s>
+            </div>
+
+            <ul>
+                <li class="index{{#if isHome}} cur{{/if}}"><a href="/" >首页</a></li>
+
+                {{#each channel}}
+                  <li {{#if cur}}class="cur"{{/if}}><a href="/channel/{{id}}" >{{name}}</a></li>
+                {{/each}}
+
+                <li {{#if pageBrand}}class="cur"{{/if}}><a href="/brand">品牌特卖</a></li>
+            </ul>
+
+            <div class="hearder-right">
+            	<a href="#" class="icon-btn-sign-in"></a>
+            </div>
+
+            {{#if showLeftBar}}
+             {{> leftbar}}
+            {{/if}}
+
+        </div>
+    </div>
+</div>
+
+
+{{{body}}}
+
+
+
+<script type="text/javascript" src="http://staticcdn.b5m.com/static/public/sea-modules/dist/libs.js" rootPath="http://staticcdn.b5m.com/static/public/sea-modules/dist" version="{{VERSION}}" id="b5m-libs"></script>
+<script type="text/javascript" src="http://staticcdn.b5m.com/??scripts/common/jquery-1.9.1.min.js,scripts/public/copyright.js,scripts/common/common.js,scripts/common/autoFill.js,scripts/common/imglazyload.min.js?v={{VERSION}}"></script>
+<script type='text/javascript' src='http://cdn.bang5mai.com/upload/web/public/app/tongji/stat2.min.js?v={{VERSION}}'></script>
+
+
+{{#if IS_DEBUG}}
+{{#assetsmap ASSETS_MAP.pkg.p1.has}}{{/assetsmap}}
+{{else}}
+<script type="text/javascript" src="{{ASSETS_MAP.pkg.p1.uri}}"></script>
+{{/if}}
+
+
+{{{block 'pageScripts'}}}
+
+
+</body>
+</html>

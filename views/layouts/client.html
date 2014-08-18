@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title>{{Title}}</title>
+    <meta name="keywords" content="{{Keywords}}" />
+    <meta name="description" content="{{Description}}" />
+
+    {{#if IS_PROD}}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    {{/if}}
+
+    <link rel="shortcut icon" href="http://staticcdn.b5m.com/proj/cms-bbs/images/favicon.ico" type="image/x-ion"/>
+
+    {{#if IS_DEBUG}}
+    {{#assetsmap ASSETS_MAP.pkg.p2.has}}{{/assetsmap}}
+    {{else}}
+    <link rel="stylesheet" href="{{ASSETS_MAP.pkg.p2.uri}}" />
+    {{/if}}
+
+
+</head>
+
+<body>
+
+
+{{{body}}}
+
+
+
+<script type="text/javascript" src="http://staticcdn.b5m.com/scripts/common/jquery-1.9.1.min.js"></script>
+{{#if IS_DEBUG}}
+{{#assetsmap ASSETS_MAP.pkg.p3.has}}{{/assetsmap}}
+{{else}}
+<script type="text/javascript" src="{{ASSETS_MAP.pkg.p3.uri}}"></script>
+{{/if}}
+
+
+{{{block 'pageScripts'}}}
+
+</body>
+</html>

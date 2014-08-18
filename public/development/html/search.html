@@ -1,0 +1,450 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>搜索结果页</title>
+	<meta name="keywords" content="上海团购导航，上海团购网站大全" />
+	<meta name="description" content="上海团购导航，上海团购最有保障的上海团购导航，为用户提供有保障的美食团购、KTV团购、电影团购信息，上海团购导航为您的生活服务。" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9; IE=EmulateIE10" />
+    <link rel="stylesheet" href="http://staticcdn.b5m.com/css/common/common.css" />
+
+    <link rel="stylesheet" href="../css/taov2.less" />
+
+</head>
+<body>
+<!--common hearder s-->
+<div class="tpbar"></div>
+<!--@header s-->
+<div class="header">
+    <div class="header-box cfx">
+        <h1 class="header-logo fl">
+            <a href="/" title="帮团购"><img src="../images/tao-logo.jpg" alt="帮团购"></a>
+        </h1>
+        <div class="header-tools-search">
+            <span class="header-search-content">
+                <form id="formid" action='/shanghai/__[##]' method="post" target="_self" onsubmit="return submit_search_tuan(this)">
+                    <label for="帮5搜">搜索从这里开始</label>
+                    <input type="text" data-attr='1005' class="header-search-key J_search J_autofill" value="" placeholder="快速搜索 全网比价">
+                    <input type="button" data-attr='1005' class="header-rearch-submit" value="帮5搜" onclick="submit_search_tuan(this)">
+                    <input type="submit" style="display:none">
+                </form>
+            </span>
+        </div>
+        <!-- country html -->
+        <div class="top-hot-key">
+        </div>
+        <!-- country html -->
+    </div>
+    <div class="header-nav-box">
+        <div class="wp">
+            <div class="header-nav-back">
+                <a data-attr="1004" href="http://www.b5m.com/" title="帮5买首页" class="icon"><u>帮5买首页</u></a>
+                <s class="header-nav-back-s2"></s><s></s>
+            </div>
+            <ul>
+                <li class="cur index"><a href="/shanghai/" target="_self">首页</a></li>
+                <li><a href="/shanghai/_meishi_" target="_self">九块九包邮</a></li>
+                <li><a href="/shanghai/_shenghuo_" target="_self">20元封顶</a></li>
+                <li><a href="/shanghai/_yule_" target="_self">超级降价</a></li>
+                <li><a href="/shanghai/_lvyoujiudian_" target="_self">品牌特卖</a></li>
+                <li><a href="/shanghai/_wanggou_" target="_self">明日预告</a></li>
+            </ul>
+            <div class="hearder-right">
+            	<a href="#" class="icon-btn-sign-in"></a>
+            </div>
+
+            <div class="taotj-navbg">
+               <div class="taotj-fixd" id="Fixed_left">
+                    <span class="ttj-fixd-tit">每日<b>9</b>点更新</span>
+                    <span class="ttj-fixd-list">
+                        <a href="javascript:;"><em class="nvz"></em>女装</a>|
+                        <a href="javascript:;"><em class="nanz"></em>男装</a>
+                        <a href="javascript:;"><em class="xb"></em>鞋包</a>|
+                        <a href="javascript:;"><em class="ny"></em>内衣</a>
+                        <a href="javascript:;"><em class="mz"></em>美妆</a>|
+                        <a href="javascript:;"><em class="ps"></em>配饰</a>
+                        <a href="javascript:;"><em class="my"></em>母婴</a>|
+                        <a href="javascript:;"><em class="jj"></em>家居</a>
+                        <a href="javascript:;"><em class="sp"></em>食品</a>|
+                        <a href="javascript:;"><em class="jd"></em>家电</a>
+                        <a href="javascript:;"><em class="sm"></em>数码</a>|
+                        <a href="javascript:;"><em class="cp"></em>车品</a>
+                    </span>
+                    <span class="boutique-recommend"><em></em>精品推荐</span>
+                    <span class="ttj-fixd-link cfx">
+                        <a href="" class="hover">九块九包邮</a>
+                        <a href="">品牌特卖</a>
+                        <a href="">超级降价</a>
+                        <a href="">明日预告</a>
+                        <em></em>
+                    </span>
+                </div> 
+            </div>
+
+
+        </div>
+    </div>
+</div>	
+<div class="tao-tejia-nav">
+    <p>
+        <span class="ttj-fixd-tit">每日<b>9</b>点更新</span>
+        <span class="ttj-fixd-list">
+            <a href=""><em class="nvz"></em>女装</a>
+            <a href=""><em class="nanz"></em>男装</a>
+            <a href=""><em class="xb"></em>鞋包</a>
+            <a href=""><em class="ny"></em>内衣</a>
+            <a href=""><em class="mz"></em>美妆</a>
+            <a href=""><em class="ps"></em>配饰</a>
+            <a href=""><em class="my"></em>母婴</a>
+            <a href=""><em class="jj"></em>家居</a>
+            <a href=""><em class="sp"></em>食品</a>
+            <a href=""><em class="jd"></em>家电</a>
+            <a href=""><em class="sm"></em>数码</a>
+            <a href=""><em class="cp"></em>车品</a>
+        </span>
+        <span class="boutique-recommend">精品推荐</span>
+        <span class="ttj-fixd-link">
+            <a href="">九块九包邮</a>
+            <a href="">品牌特卖</a>
+            <a href="">超级降价</a>
+            <a href="">明日预告</a>
+            <em></em>
+        </span>
+    </p>
+</div>
+<!-- <div class="tao-tejia-advert">
+    <a href="" class="taotejia-head-pic"><img src="../images/head-advertis.png"></a>
+</div> -->
+<div class="taotejia-content">
+    
+    <!-- <p class="taotj-cont-tit cfx">
+        <span class="taotj-brand"><b>精</b>选品牌</span>
+        <span class="taotj-tit-pic"></span>
+    </p>
+    <div class="taotj-image-rotation">
+        <a class="image-rotation-l" href=""></a>
+        <a class="image-rotation-r" href=""></a>
+        <ul>
+            <li>
+                <a href=""><img src="../images/ttj-img1.jpg"><label><b>0.2</b>折起</label></a>
+                <p>
+                    <span class="lispan-l">男士休闲鞋专场</span>
+                    <span class="lispan-r" time start="2014-6-30 0:0:0" end="2014-7-19 17:22:00"><em></em><dfn>01</dfn>天<dfn>01</dfn>时<dfn>01</dfn>分<dfn>01</dfn>秒</span>
+                </p>
+            </li>
+            <li>
+                <a href=""><img src="../images/ttj-img1.jpg"><label><b>0.2</b>折起</label></a>
+                <p>
+                    <span class="lispan-l">男士休闲鞋专场</span>
+                    <span class="lispan-r" time start="2014-6-30 0:0:0" end="2014-7-4 17:22:00"><em></em><dfn>01</dfn>天<dfn>01</dfn>时<dfn>01</dfn>分<dfn>01</dfn>秒</span>
+                </p>
+            </li>
+            <li>
+            <a href=""><img src="../images/ttj-img1.jpg"><label><b>0.2</b>折起</label></a>
+            <p>
+                <span class="lispan-l">男士休闲鞋专场</span>
+                <span class="lispan-r" time start="2014-6-30 0:0:0" end="2014-7-5 17:22:00"><em></em><dfn>01</dfn>天<dfn>01</dfn>时<dfn>01</dfn>分<dfn>01</dfn>秒</span>
+            </p>
+        </li>
+            <li>
+                <a href=""><img src="../images/ttj-img1.jpg"><label><b>0.2</b>折起</label></a>
+                <p>
+                    <span class="lispan-l">男士休闲鞋专场</span>
+                    <span class="lispan-r" time start="2014-6-30 0:0:0" end="2014-7-5 17:22:00"><em></em><dfn>01</dfn>天<dfn>01</dfn>时<dfn>01</dfn>分<dfn>01</dfn>秒</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <p class="taotj-cont-tit cfx">
+        <span class="taotj-brand"><b>今</b>日特价</span>
+        <span class="taotj-nav">
+            <a href="">默认</a>|<a href="" class="sort">销量<em></em></a>|<a href="" class="invert">最新<em></em></a>
+        </span>
+        <span class="taotj-top-dow">
+            <a class="taotj-topdow-l" href=""></a>
+            <label>2/26</label>
+            <a class="taotj-topdow-r" href=""></a>
+        </span>
+    </p> -->
+    <span class="ttj-cont-search">
+        <a href="">首页</a>&gt;
+        <span>搜索&nbsp;“<dfn>电动牙刷</dfn>”</span>
+    </span>
+    <div class="taote-content-list">
+        <ul>
+            <li class="extra">
+                <p class="cont-lis-lcon">
+                    <span class="cont-list-gree"></span>
+                    <span class="cont-list-red"></span>  
+                </p>
+                <a class="cont-list-img" href=""><img src="../images/ttj-img2.jpg"></a>
+                <a class="cont-list-link" href="">Pampers 帮宝适 超薄干爽超大包装中号100片送10片(新兴渠道专供装)</a>
+                <div class="cont-list-below">
+                    <span class="below-price"><dfn>&yen;</dfn>2600</span>
+                    <span class="original-price"><dfn>&yen;263</dfn></span>
+                    <span class="below-renshu"><strong>300</strong>人已买</span>
+                    <span class="below-zhekou">3.5折</span>
+                    <a class="cont-list-buy" href="">立即购买</a>
+                </div>
+            </li>
+            <li class="extra">
+                <p class="cont-lis-lcon">
+                    <span class="cont-list-gree"></span>
+                    <span class="cont-list-red"></span>  
+                </p>
+                <a class="cont-list-img" href=""><img src="../images/ttj-img2.jpg"></a>
+                <a class="cont-list-link" href="">Pampers 帮宝适 超薄干爽超大包装中号100片送10片(新兴渠道专供装)</a>
+                <div class="cont-list-below">
+                    <span class="below-price"><dfn>&yen;</dfn>2600</span>
+                    <span class="original-price"><dfn>&yen;263</dfn></span>
+                    <span class="below-renshu"><strong>300</strong>人已买</span>
+                    <span class="below-zhekou">3.5折</span>
+                    <a class="cont-list-buy" href="">立即购买</a>
+                </div>
+            </li>
+            <li class="extra">
+                <p class="cont-lis-lcon">
+                    <span class="cont-list-gree"></span>
+                    <span class="cont-list-red"></span>  
+                </p>
+                <a class="cont-list-img" href=""><img src="../images/ttj-img2.jpg"></a>
+                <a class="cont-list-link" href="">Pampers 帮宝适 超薄干爽超大包装中号100片送10片(新兴渠道专供装)</a>
+                <div class="cont-list-below">
+                    <span class="below-price"><dfn>&yen;</dfn>2600</span>
+                    <span class="original-price"><dfn>&yen;263</dfn></span>
+                    <span class="below-renshu"><strong>300</strong>人已买</span>
+                    <span class="below-zhekou">3.5折</span>
+                    <a class="cont-list-buy" href="">立即购买</a>
+                </div>
+            </li>
+            <li class="newest">
+                <p class="cont-lis-lcon">
+                    <span class="cont-list-gree"></span>
+                    <span class="cont-list-red"></span>  
+                </p>
+                <a class="cont-list-img" href=""><img src="../images/ttj-img2.jpg"></a>
+                <a class="cont-list-link" href="">Pampers 帮宝适 超薄干爽超大包装中号100片送10片(新兴渠道专供装)</a>
+                <div class="cont-list-below">
+                    <span class="below-price"><dfn>&yen;</dfn>2600</span>
+                    <span class="original-price"><dfn>&yen;263</dfn></span>
+                    <span class="below-renshu"><strong>300</strong>人已买</span>
+                    <span class="below-zhekou">3.5折</span>
+                    <a class="cont-list-buy" href="">立即购买</a>
+                </div>
+            </li>
+            <li class="newest">
+                <p class="cont-lis-lcon">
+                    <span class="cont-list-gree"></span>
+                    <span class="cont-list-red"></span>  
+                </p>
+                <a class="cont-list-img" href=""><img src="../images/ttj-img2.jpg"></a>
+                <a class="cont-list-link" href="">Pampers 帮宝适 超薄干爽超大包装中号100片送10片(新兴渠道专供装)</a>
+                <div class="cont-list-below">
+                    <span class="below-price"><dfn>&yen;</dfn>2600</span>
+                    <span class="original-price"><dfn>&yen;263</dfn></span>
+                    <span class="below-renshu"><strong>300</strong>人已买</span>
+                    <span class="below-zhekou">3.5折</span>
+                    <a class="cont-list-buy" href="">立即购买</a>
+                </div>
+            </li>
+            <li class="newest">
+                <p class="cont-lis-lcon">
+                    <span class="cont-list-gree"></span>
+                    <span class="cont-list-red"></span>  
+                </p>
+                <a class="cont-list-img" href=""><img src="../images/ttj-img2.jpg"></a>
+                <a class="cont-list-link" href="">Pampers 帮宝适 超薄干爽超大包装中号100片送10片(新兴渠道专供装)</a>
+                <div class="cont-list-below">
+                    <span class="below-price"><dfn>&yen;</dfn>2600</span>
+                    <span class="original-price"><dfn>&yen;263</dfn></span>
+                    <span class="below-renshu"><strong>300</strong>人已买</span>
+                    <span class="below-zhekou">3.5折</span>
+                    <a class="cont-list-buy" href="">立即购买</a>
+                </div>
+            </li>
+            <li class="extra">
+                <p class="cont-lis-lcon">
+                    <span class="cont-list-gree"></span>
+                    <span class="cont-list-red"></span>  
+                </p>
+                <a class="cont-list-img" href=""><img src="../images/ttj-img2.jpg"></a>
+                <a class="cont-list-link" href="">Pampers 帮宝适 超薄干爽超大包装中号100片送10片(新兴渠道专供装)</a>
+                <div class="cont-list-below">
+                    <span class="below-price"><dfn>&yen;</dfn>2600</span>
+                    <span class="original-price"><dfn>&yen;263</dfn></span>
+                    <span class="below-renshu"><strong>300</strong>人已买</span>
+                    <span class="below-zhekou">3.5折</span>
+                    <a class="cont-list-buy" href="">立即购买</a>
+                </div>
+            </li>
+            <li class="extra">
+                <p class="cont-lis-lcon">
+                    <span class="cont-list-gree"></span>
+                    <span class="cont-list-red"></span>  
+                </p>
+                <a class="cont-list-img" href=""><img src="../images/ttj-img2.jpg"></a>
+                <a class="cont-list-link" href="">Pampers 帮宝适 超薄干爽超大包装中号100片送10片(新兴渠道专供装)</a>
+                <div class="cont-list-below">
+                    <span class="below-price"><dfn>&yen;</dfn>2600</span>
+                    <span class="original-price"><dfn>&yen;263</dfn></span>
+                    <span class="below-renshu"><strong>300</strong>人已买</span>
+                    <span class="below-zhekou">3.5折</span>
+                    <a class="cont-list-buy" href="">立即购买</a>
+                </div>
+            </li>
+            <li class="extra">
+                <p class="cont-lis-lcon">
+                    <span class="cont-list-gree"></span>
+                    <span class="cont-list-red"></span>  
+                </p>
+                <a class="cont-list-img" href=""><img src="../images/ttj-img2.jpg"></a>
+                <a class="cont-list-link" href="">Pampers 帮宝适 超薄干爽超大包装中号100片送10片(新兴渠道专供装)</a>
+                <div class="cont-list-below">
+                    <span class="below-price"><dfn>&yen;</dfn>2600</span>
+                    <span class="original-price"><dfn>&yen;263</dfn></span>
+                    <span class="below-renshu"><strong>300</strong>人已买</span>
+                    <span class="below-zhekou">3.5折</span>
+                    <a class="cont-list-buy" href="">立即购买</a>
+                </div>
+            </li>
+            <li class="newest">
+                <p class="cont-lis-lcon">
+                    <span class="cont-list-gree"></span>
+                    <span class="cont-list-red"></span>  
+                </p>
+                <a class="cont-list-img" href=""><img src="../images/ttj-img2.jpg"></a>
+                <a class="cont-list-link" href="">Pampers 帮宝适 超薄干爽超大包装中号100片送10片(新兴渠道专供装)</a>
+                <div class="cont-list-below">
+                    <span class="below-price"><dfn>&yen;</dfn>2600</span>
+                    <span class="original-price"><dfn>&yen;263</dfn></span>
+                    <span class="below-renshu"><strong>300</strong>人已买</span>
+                    <span class="below-zhekou">3.5折</span>
+                    <a class="cont-list-buy" href="">立即购买</a>
+                </div>
+            </li>
+            <li class="newest">
+                <p class="cont-lis-lcon">
+                    <span class="cont-list-gree"></span>
+                    <span class="cont-list-red"></span>  
+                </p>
+                <a class="cont-list-img" href=""><img src="../images/ttj-img2.jpg"></a>
+                <a class="cont-list-link" href="">Pampers 帮宝适 超薄干爽超大包装中号100片送10片(新兴渠道专供装)</a>
+                <div class="cont-list-below">
+                    <span class="below-price"><dfn>&yen;</dfn>2600</span>
+                    <span class="original-price"><dfn>&yen;263</dfn></span>
+                    <span class="below-renshu"><strong>300</strong>人已买</span>
+                    <span class="below-zhekou">3.5折</span>
+                    <a class="cont-list-buy" href="">立即购买</a>
+                </div>
+            </li>
+            <li class="newest">
+                <p class="cont-lis-lcon">
+                    <span class="cont-list-gree"></span>
+                    <span class="cont-list-red"></span>  
+                </p>
+                <a class="cont-list-img" href=""><img src="../images/ttj-img2.jpg"></a>
+                <a class="cont-list-link" href="">Pampers 帮宝适 超薄干爽超大包装中号100片送10片(新兴渠道专供装)</a>
+                <div class="cont-list-below">
+                    <span class="below-price"><dfn>&yen;</dfn>2600</span>
+                    <span class="original-price"><dfn>&yen;263</dfn></span>
+                    <span class="below-renshu"><strong>300</strong>人已买</span>
+                    <span class="below-zhekou">3.5折</span>
+                    <a class="cont-list-buy" href="">立即购买</a>
+                </div>
+            </li>
+            <li class="extra">
+                <p class="cont-lis-lcon">
+                    <span class="cont-list-gree"></span>
+                    <span class="cont-list-red"></span>  
+                </p>
+                <a class="cont-list-img" href=""><img src="../images/ttj-img2.jpg"></a>
+                <a class="cont-list-link" href="">Pampers 帮宝适 超薄干爽超大包装中号100片送10片(新兴渠道专供装)</a>
+                <div class="cont-list-below">
+                    <span class="below-price"><dfn>&yen;</dfn>2600</span>
+                    <span class="original-price"><dfn>&yen;263</dfn></span>
+                    <span class="below-renshu"><strong>300</strong>人已买</span>
+                    <span class="below-zhekou">3.5折</span>
+                    <a class="cont-list-buy" href="">立即购买</a>
+                </div>
+            </li>
+            <li class="extra">
+                <p class="cont-lis-lcon">
+                    <span class="cont-list-gree"></span>
+                    <span class="cont-list-red"></span>  
+                </p>
+                <a class="cont-list-img" href=""><img src="../images/ttj-img2.jpg"></a>
+                <a class="cont-list-link" href="">Pampers 帮宝适 超薄干爽超大包装中号100片送10片(新兴渠道专供装)</a>
+                <div class="cont-list-below">
+                    <span class="below-price"><dfn>&yen;</dfn>2600</span>
+                    <span class="original-price"><dfn>&yen;263</dfn></span>
+                    <span class="below-renshu"><strong>300</strong>人已买</span>
+                    <span class="below-zhekou">3.5折</span>
+                    <a class="cont-list-buy" href="">立即购买</a>
+                </div>
+            </li>
+            <li class="extra">
+                <p class="cont-lis-lcon">
+                    <span class="cont-list-gree"></span>
+                    <span class="cont-list-red"></span>  
+                </p>
+                <a class="cont-list-img" href=""><img src="../images/ttj-img2.jpg"></a>
+                <a class="cont-list-link" href="">Pampers 帮宝适 超薄干爽超大包装中号100片送10片(新兴渠道专供装)</a>
+                <div class="cont-list-below">
+                    <span class="below-price"><dfn>&yen;</dfn>2600</span>
+                    <span class="original-price"><dfn>&yen;263</dfn></span>
+                    <span class="below-renshu"><strong>300</strong>人已买</span>
+                    <span class="below-zhekou">3.5折</span>
+                    <a class="cont-list-buy" href="">立即购买</a>
+                </div>
+            </li>
+        </ul>
+
+
+        <div class="page clear-fix cf">
+                <div>
+                    <a class="first dis" href="javascript:void(0)">首 页</a>
+                    <a class="prev dis" href="javascript:void(0)">&lt;</a>
+                    <span class="cur">1</span>
+                    <a href="/shanghai/_meishi__p2" target="_self" page="2">2</a>
+                    <a href="/shanghai/_meishi__p3" target="_self" page="3">3</a>
+                    <a href="/shanghai/_meishi__p4" target="_self" page="4">4</a>
+                    <a href="/shanghai/_meishi__p5" target="_self" page="5">5</a>
+                    <span>...</span>
+                    <a href="/shanghai/_meishi__p2" class="next" target="_self" page="2">&gt;</a>
+                    <a href="/shanghai/_meishi__p559" class="last" target="_self" page="559">尾 页</a>
+                    <span page="559" class="pagenum">共559页&nbsp;第</span>
+                    <span class="page-input">
+                        <input type="text" value="1" onkeydown="javascript:if(event.keyCode==13){var page=this.value; if(page &lt; 0 || isNaN(page)) { page = 1; } else if(this.value&gt;559){ page =559;}location='/shanghai/_meishi__p'+page+''}">
+                        <a onclick="var page = $(this).prev('input:first').val(); if(page &lt; 0  || isNaN(page)){ page=1;}else if(page &gt; 559){page=559;}location='/shanghai/_meishi__p'+page+''"href="javascript:void(0);return true;" target="_self">GO</a>
+                    </span>
+                    <span class="go">页</span>
+                </div>
+            </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<script src="http://staticcdn.b5m.com/static/scripts/public/copyright.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://staticcdn.b5m.com/scripts/common/jquery-1.9.1.min.js"></script>
+<script id="b5m-libs" type="text/javascript" src="http://staticcdn.b5m.com/static/public/sea-modules/dist/libs.js" rootPath="http://staticcdn.b5m.com/static/public/sea-modules/dist" version="20150421094218"></script>
+<script type="text/javascript" src="http://staticcdn.b5m.com/scripts/common/common.js"></script>
+<script type="text/javascript" src="../js/countTime.js"></script>
+<script type="text/javascript" src="../js/taov2.js"></script>
+<script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>  
+
+</body>
+</html>

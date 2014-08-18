@@ -1,0 +1,12 @@
+{
+    "name" : "tejia.b5m.com",
+    "script" : "bin/www",
+    "watch" : "true",
+    "cwd" : "./",
+    "instances" : 6,
+    "ignoreWatch" : ["node_modules","public/development"],
+    "env" : {
+        "NODE_ENV" : "development"
+    },
+    "port" : 3003
+}

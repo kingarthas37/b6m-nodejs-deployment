@@ -1,0 +1,49 @@
+{{> leftbar}}
+
+<a name="item"></a>
+<div class="taotejia-content">
+
+
+    <span class="ttj-cont-nine">
+      {{sort channelId sort field curCategory}}
+    </span>
+
+
+<div class="taote-content-list">
+
+<ul>
+
+   {{#each channelGoodsList.data}}
+    <li class="extra{{#if tag}}{{tag}}{{/if}}">
+        <p class="cont-lis-lcon">
+            <span class="cont-list-gree"></span>
+            <span class="cont-list-red"></span>
+        </p>
+        <a class="cont-list-img" href="/detail/{{id}}" target="_blank"><img src="{{index_image}}" /></a>
+        <a class="cont-list-link" href="/detail/{{id}}" target="_blank" title="{{name}}">{{name}}</a>
+        <div class="cont-list-below">
+            <span class="below-price"><dfn>&yen;</dfn>{{price}}<span class="below-zhekou">{{discount-helper price old_price}}折</span></span>
+            <span class="original-price"><dfn>&yen;{{old_price}}</dfn></span>
+            <span class="below-renshu"><strong>{{sales}}</strong>人已买</span>
+            <a class="cont-list-buy" target="_blank" href="{{buy_link}}">立即购买</a>
+        </div>
+    </li>
+   {{/each}}
+
+
+</ul>
+
+ {{pager pager}}
+
+</div>
+</div>
+
+
+
+{{#contentFor 'pageScripts'}}
+<script type="text/javascript">
+    $(function(){
+        taoInit.index();
+    });
+</script>
+{{/contentFor}}

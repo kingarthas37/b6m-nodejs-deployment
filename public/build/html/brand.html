@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>淘特价-品牌特卖</title>
+
+    <link href="http://staticcdn.b5m.com/static/css/common/common.css" rel="stylesheet" type="text/css" />
+
+   <link rel="stylesheet" href="http://staticcdn.b5m.com/proj/tejia/css/brand_544363a.css"  type="text/css" />
+   <link rel="stylesheet" href="http://staticcdn.b5m.com/proj/tejia/css/taov2_da4827c.css" type="text/css"/>
+
+
+</head>
+<body>
+<div class="tpbar">
+
+</div>
+<div class="header">
+    <div class="header-box cfx">
+        <h1 class="header-logo fl">
+            <a href="/" title="帮团购"><img src="http://staticcdn.b5m.com/proj/tejia/images/tao-logo_da0ca10.jpg" alt="帮团购"></a>
+        </h1>
+        <div class="header-tools-search">
+            <span class="header-search-content">
+                <form id="formid" action='/shanghai/__[##]' method="post" target="_self" onsubmit="return submit_search_tuan(this)">
+                    <label for="帮5搜">搜索从这里开始</label>
+                    <input type="text" data-attr='1005' class="header-search-key J_search J_autofill" value="" placeholder="快速搜索 全网比价">
+                    <input type="button" data-attr='1005' class="header-rearch-submit" value="帮5搜" onclick="submit_search_tuan(this)">
+                    <input type="submit" style="display:none">
+                </form>
+            </span>
+        </div>
+        <!-- country html -->
+        <div class="top-hot-key">
+        </div>
+        <!-- country html -->
+    </div>
+    <div class="header-nav-box">
+        <div class="wp">
+            <div class="header-nav-back">
+                <a data-attr="1004" href="http://www.b5m.com/" title="帮5买首页" class="icon"><u>帮5买首页</u></a>
+                <s class="header-nav-back-s2"></s><s></s>
+            </div>
+            <ul>
+                <li class="cur index"><a href="/shanghai/" target="_self">首页</a></li>
+                <li><a href="/shanghai/_meishi_" target="_self">九块九包邮</a></li>
+                <li><a href="/shanghai/_shenghuo_" target="_self">20元封顶</a></li>
+                <li><a href="/shanghai/_yule_" target="_self">超级降价</a></li>
+                <li><a href="/shanghai/_lvyoujiudian_" target="_self">品牌特卖</a></li>
+                <li><a href="/shanghai/_wanggou_" target="_self">明日预告</a></li>
+            </ul>
+            <div class="hearder-right">
+                <a href="#" class="icon-btn-sign-in"></a>
+            </div>
+            <div class="taotj-navbg">
+                <div class="taotj-fixd" id="Fixed_left">
+                    <span class="ttj-fixd-tit">每日<b>9</b>点更新</span>
+                    <span class="ttj-fixd-list">
+                        <a href="javascript:;"><em class="nvz"></em>女装</a>|
+                        <a href="javascript:;"><em class="nanz"></em>男装</a>
+                        <a href="javascript:;"><em class="xb"></em>鞋包</a>|
+                        <a href="javascript:;"><em class="ny"></em>内衣</a>
+                        <a href="javascript:;"><em class="mz"></em>美妆</a>|
+                        <a href="javascript:;"><em class="ps"></em>配饰</a>
+                        <a href="javascript:;"><em class="my"></em>母婴</a>|
+                        <a href="javascript:;"><em class="jj"></em>家居</a>
+                        <a href="javascript:;"><em class="sp"></em>食品</a>|
+                        <a href="javascript:;"><em class="jd"></em>家电</a>
+                        <a href="javascript:;"><em class="sm"></em>数码</a>|
+                        <a href="javascript:;"><em class="cp"></em>车品</a>
+                    </span>
+                    <span class="boutique-recommend"><em></em>精品推荐</span>
+                    <span class="ttj-fixd-link cfx">
+                        <a href="" class="hover">九块九包邮</a>
+                        <a href="">品牌特卖</a>
+                        <a href="">超级降价</a>
+                        <a href="">明日预告</a>
+                        <em></em>
+                    </span>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+<div class="tao-tejia-nav">
+    <p>
+        <span class="ttj-fixd-tit">每日<b>9</b>点更新</span>
+        <span class="ttj-fixd-list">
+            <a href=""><em class="nvz"></em>女装</a>
+            <a href=""><em class="nanz"></em>男装</a>
+            <a href=""><em class="xb"></em>鞋包</a>
+            <a href=""><em class="ny"></em>内衣</a>
+            <a href=""><em class="mz"></em>美妆</a>
+            <a href=""><em class="ps"></em>配饰</a>
+            <a href=""><em class="my"></em>母婴</a>
+            <a href=""><em class="jj"></em>家居</a>
+            <a href=""><em class="sp"></em>食品</a>
+            <a href=""><em class="jd"></em>家电</a>
+            <a href=""><em class="sm"></em>数码</a>
+            <a href=""><em class="cp"></em>车品</a>
+        </span>
+        <span class="boutique-recommend">精品推荐</span>
+        <span class="ttj-fixd-link">
+            <a href="">九块九包邮</a>
+            <a href="">品牌特卖</a>
+            <a href="">超级降价</a>
+            <a href="">明日预告</a>
+            <em></em>
+        </span>
+    </p>
+</div>
+<!-- common -->
+<dl class="wc-top-hotbar" id="TopHotBar">
+ <dt>最近热卖:</dt>
+ <dd class="cur"><a href="javascript:;">服装</a>
+  <span class="colors"></span>
+ </dd>
+ <dd class=""><a href="javascript:;">鞋包</a>
+  <span class="colors"></span>
+ </dd>
+ <dd class=""><a href="javascript:;">饰品</a>
+  <span class="colors"></span>
+ </dd>
+ <dd class=""><a href="javascript:;">母婴</a>
+  <span class="colors"></span>
+ </dd>
+ <dd class=""><a href="javascript:;">家居</a>
+  <span class="colors"></span>
+ </dd>
+ <dd class=""><a href="javascript:;">食品</a>
+  <span class="colors"></span>
+ </dd>
+ <dd class=""><a href="javascript:;">百货</a>
+  <span class="colors"></span>
+ </dd>
+ <dd class="chart"><a href="javascript:;">最后疯抢</a>
+  <span class="colors"></span>
+ </dd>
+ <!--<dd class="coming"><a href="javascript:;">即将推出</a>
+  <span class="colors"></span>
+ </dd>
+ -->
+</dl>
+<div class="wc-top-wp">
+ <div class="top-show">
+   <div class="top-showin">
+     <a href="#"><img src="http://placehold.it/1906x320"/></a>
+   </div>
+ </div>
+</div>
+<!-- -->
+<div class="wp" id="autoTop">
+<a class="bar-right" href="javascript:;" id="BarRight">
+  <img src="http://img03.taobaocdn.com/imgextra/i3/1761495540/T2u9mMXkJbXXXXXXXX_!!1761495540.jpg_q90.jpg" />
+ </a>
+ <div class="wc-item-wpl">
+ <div class="wc-item-wp">
+ <div class="wc-item-hd">
+ <span class="numb-f">1F</span><span class="green">最近热卖</span>/ 服装特区
+ </div>
+<!--1-->
+ <div class="wc-items">
+   <div class="detail">
+     <a class="icon" href="javascript:;" ><img src="http://img02.taobaocdn.com/imgextra/i2/373327370/T2sIU7XohaXXXXXXXX-373327370.jpg"/></a>
+   <div class="brief">风格前卫 时尚简约</div>
+  
+   <div class="infos "><a class="a" href="javascript:;">卓雅周末JORYA weekend女装</a></div>
+   <div class="disc"><span class="salebg2">0.5</span>折起</div>
+   <div class="timer" time start="2014-3-18 0:0:0" end="2014-3-19 17:22:00">49天11时23分44秒</div>
+   </div>
+   <a class="img" href="javascript:;"><img src="http://img01.taobaocdn.com/imgextra/i4/661916707/T2KFvQXwlaXXXXXXXX-661916707.jpg"/></a>
+ </div>
+ <!--1 end-->
+ <!--2-->
+ <div class="wc-items">
+   <div class="detail">
+     <a class="icon" href="javascript:;" ><img src="http://gtms02.alicdn.com/tps/i2/T18fd1FshjXXbc_Djq-90-45.jpg"/></a>
+   <div class="brief">风格前卫 时尚简约</div>
+  
+   <div class="infos "><a class="a" href="javascript:;">卓雅周末JORYA weekend女装</a></div>
+   <div class="disc"><span class="salebg2">0.5</span>折起</div>
+   <div class="timer" time start="2014-3-18 0:0:0" end="2014-3-21 17:22:00">49天11时23分44秒</div>
+   </div>
+   <a class="img" href="javascript:;"><img src="http://tu.taobaocdn.com/s1/667286523/运营使用/36281-1"/></a>
+ </div>
+ <!--2 end-->
+</div>
+ <!--left-->
+   
+    <!--品类1-->
+    <div class="wc-item-wp">
+      <div class="wc-item-hd">
+       <span class="numb-f">2F</span>服装特区
+      </div>
+       <!--1-->
+       <div class="wc-items">
+         <div class="detail">
+         <a class="icon" href="javascript:;" ><img src="http://gtms04.alicdn.com/tps/i4/T1gT80FBpeXXbc_Djq-90-45.jpg"/></a>
+         <div class="brief">风格前卫 时尚简约</div>
+        
+         <div class="infos "><a class="a" href="javascript:;">卓雅周末JORYA weekend女装</a></div>
+         <div class="disc"><span class="salebg2">0.5</span>折起</div>
+         <div class="timer" time start="2014-3-18 0:0:0" end="2014-3-22 17:22:00">49天11时23分44秒</div>
+         </div>
+         <a class="img" href="javascript:;"><img src="http://img02.taobaocdn.com/imgextra/i1/387542955/T2vo7SXcFbXXXXXXXX-387542955.jpg"/></a>
+       </div>
+      <!--1 end-->
+      <!--2-->
+       <div class="wc-items ">
+         <div class="detail">
+         <a class="icon" href="javascript:;" ><img src="http://img02.taobaocdn.com/imgextra/i2/167873659/T2T0OXXydaXXXXXXXX-167873659.jpg"/></a>
+         <div class="brief">风格前卫 时尚简约</div>
+        
+         <div class="infos "><a class="a" href="javascript:;">卓雅周末JORYA weekend女装</a></div>
+         <div class="disc"><span class="salebg2">0.5</span>折起</div>
+         <div class="timer" time start="2014-3-18 0:0:0" end="2014-3-23 15:22:00">49天11时23分44秒</div>
+         </div>
+         <a class="img" href="javascript:;"><img src="http://img03.taobaocdn.com/imgextra/i1/387542955/T2XluOXg0cXXXXXXXX-387542955.jpg"/></a>
+       </div>
+     <!--2 end-->
+     <!--3-->
+       <div class="wc-items ">
+         <div class="detail">
+         <a class="icon" href="javascript:;" ><img src="http://img02.taobaocdn.com/imgextra/i2/167873659/T2T0OXXydaXXXXXXXX-167873659.jpg"/></a>
+         <div class="brief">风格前卫 时尚简约</div>
+        
+         <div class="infos "><a class="a" href="javascript:;">卓雅周末JORYA weekend女装</a></div>
+         <div class="disc"><span class="salebg2">0.5</span>折起</div>
+         <div class="timer" time start="2014-3-18 0:0:0" end="2014-3-23 15:22:00">49天11时23分44秒</div>
+         </div>
+         <a class="img" href="javascript:;"><img src="http://img03.taobaocdn.com/imgextra/i1/387542955/T2XluOXg0cXXXXXXXX-387542955.jpg"/></a>
+       </div>
+     <!--3 end-->
+     </div>
+     <!--品类1 end-->
+      <!--品类2-->
+    <div class="wc-item-wp">
+      <div class="wc-item-hd">
+       <span class="numb-f">3F</span>服装特区
+      </div>
+       <!--1-->
+       <div class="wc-items">
+         <div class="detail">
+         <a class="icon" href="javascript:;" ><img src="http://img02.taobaocdn.com/imgextra/i2/723989220/T2hpyOXBJaXXXXXXXX-723989220.jpg"/></a>
+         <div class="brief">风格前卫 时尚简约</div>
+        
+         <div class="infos "><a class="a" href="javascript:;">卓雅周末JORYA weekend女装</a></div>
+         <div class="disc"><span class="salebg2">0.5</span>折起</div>
+         <div class="timer" time start="2014-3-18 0:0:0" end="2014-3-20 13:22:00">49天11时23分44秒</div>
+         </div>
+         <a class="img" href="javascript:;"><img src="http://img01.taobaocdn.com/imgextra/i4/685563493/T2VMQxXdRbXXXXXXXX-685563493.jpg"/></a>
+       </div>
+      <!--1 end-->
+      <!--2-->
+       <div class="wc-items ">
+         <div class="detail">
+         <a class="icon" href="javascript:;" ><img src="http://img05.taobaocdn.com/bao/uploaded/i5/T1AW.oFdNXXXb1upjX.jpg"/></a>
+         <div class="brief">风格前卫 时尚简约</div>
+        
+         <div class="infos "><a class="a" href="javascript:;">卓雅周末JORYA weekend女装</a></div>
+         <div class="disc"><span class="salebg2">0.5</span>折起</div>
+         <div class="timer" time start="2014-3-18 0:0:0" end="2014-3-28 10:22:00">49天11时23分44秒</div>
+         </div>
+         <a class="img" href="javascript:;"><img src="http://img04.taobaocdn.com/imgextra/i1/685563493/T2E8ULXlBaXXXXXXXX-685563493.jpg"/></a>
+       </div>
+     <!--2 end-->
+     </div>
+     <!--品类2 end-->
+       <!--品类3-->
+    <div class="wc-item-wp">
+      <div class="wc-item-hd">
+      <span class="numb-f">3F</span>服装特区
+      </div>
+       <!--1-->
+       <div class="wc-items">
+         <div class="detail">
+         <a class="icon" href="javascript:;" ><img src="http://gtms02.alicdn.com/tps/i2/T13w48FAljXXbc_Djq-90-45.jpg"/></a>
+         <div class="brief">风格前卫 时尚简约</div>
+        
+         <div class="infos "><a class="a" href="javascript:;">卓雅周末JORYA weekend女装</a></div>
+         <div class="disc"><span class="salebg2">0.5</span>折起</div>
+         <div class="timer" time start="2014-3-18 0:0:0" end="2014-3-20 13:22:00">49天11时23分44秒</div>
+         </div>
+         <a class="img" href="javascript:;"><img src="http://tu.taobaocdn.com/s1/667286523/运营使用/36281-2_001"/></a>
+       </div>
+      <!--1 end-->
+      <!--2-->
+       <div class="wc-items ">
+         <div class="detail">
+         <a class="icon" href="javascript:;" ><img src="http://img04.taobaocdn.com/bao/uploaded/i4/T1n2qYFmpcXXb1upjX.jpg"/></a>
+         <div class="brief">风格前卫 时尚简约</div>
+        
+         <div class="infos "><a class="a" href="javascript:;">卓雅周末JORYA weekend女装</a></div>
+         <div class="disc"><span class="salebg2">0.5</span>折起</div>
+         <div class="timer" time start="2014-3-18 0:0:0" end="2014-3-28 10:22:00">49天11时23分44秒</div>
+         </div>
+         <a class="img" href="javascript:;"><img src="http://tu.taobaocdn.com/s1/667286523/运营使用/36281-3"/></a>
+       </div>
+     <!--2 end-->
+     </div>
+     <!--品类3 end-->
+      <!--品类4-->
+    <div class="wc-item-wp">
+      <div class="wc-item-hd">
+      <span class="numb-f">3F</span>服装特区
+      </div>
+       <!--1-->
+       <div class="wc-items">
+         <div class="detail">
+         <a class="icon" href="javascript:;" ><img src="http://img03.taobaocdn.com/imgextra/i3/114141735/T2IOTYXvhaXXXXXXXX-114141735.jpg"/></a>
+         <div class="brief">风格前卫 时尚简约</div>
+        
+         <div class="infos "><a class="a" href="javascript:;">卓雅周末JORYA weekend女装</a></div>
+         <div class="disc"><span class="salebg2">0.5</span>折起</div>
+         <div class="timer" time start="2014-3-18 0:0:0" end="2014-3-20 13:22:00">49天11时23分44秒</div>
+         </div>
+         <a class="img" href="javascript:;"><img src="http://img01.taobaocdn.com/imgextra/i2/387542955/T24VaWXBpaXXXXXXXX-387542955.jpg"/></a>
+       </div>
+      <!--1 end-->
+      <!--2-->
+       <div class="wc-items ">
+         <div class="detail">
+         <a class="icon" href="javascript:;" ><img src="http://img01.taobaocdn.com/imgextra/i1/114141735/T2km6YXt0aXXXXXXXX-114141735.jpg"/></a>
+         <div class="brief">风格前卫 时尚简约</div>
+        
+         <div class="infos "><a class="a" href="javascript:;">卓雅周末JORYA weekend女装</a></div>
+         <div class="disc"><span class="salebg2">0.5</span>折起</div>
+         <div class="timer" time start="2014-3-18 0:0:0" end="2014-3-28 10:22:00">49天11时23分44秒</div>
+         </div>
+         <a class="img" href="javascript:;"><img src="http://img03.taobaocdn.com/imgextra/i3/661916707/T23fTRXzlXXXXXXXXX-661916707.jpg"/></a>
+       </div>
+     <!--2 end-->
+     </div>
+     <!--品类4 end-->
+  </div>
+<!--left end-->
+<!--right-->  
+  <div class="bar-wpr">
+    <div class="bar-slider" id="saleTabs">
+      <ul class="hd" >
+      <li class="">
+       <span>今日最大牌</span>
+       <dl>
+       <dd>
+          <a href="javascript:;"><img src="http://img02.taobaocdn.com/imgextra/i2/15025027982645612/T2v3dkXxJaXXXXXXXX_!!853595025-0-cs-!CS.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img03.taobaocdn.com/imgextra/i3/81478817/T2CztlXv8XXXXXXXXX_!!81478817.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img04.taobaocdn.com/imgextra/i4/11758028446335165/T2Ie79Xm8aXXXXXXXX_!!1089441758-0-cs-!CS.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img03.taobaocdn.com/tps/i3/T1SlwsXndaXXckjTg3-102-50.png" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2ebitXa8cXXXXXXXX_!!755579902.png_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1opf.XfJXXXcUQpbX_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img03.taobaocdn.com/tps/i3/T1SlwsXndaXXckjTg3-102-50.png" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2ebitXa8cXXXXXXXX_!!755579902.png_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1opf.XfJXXXcUQpbX_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img03.taobaocdn.com/tps/i3/T1SlwsXndaXXckjTg3-102-50.png" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2ebitXa8cXXXXXXXX_!!755579902.png_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T17MfMXnNbXXceEzHy-500-250.jpg_120x120.jpg" /></a>
+       </dd>
+        <dd>
+           <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1HZb1XlljXXagOFbX_120x120.jpg" /></a>
+        </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1HZb1XlljXXagOFbX_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1HZb1XlljXXagOFbX_120x120.jpg" /></a>
+       </dd>
+        <dd>
+           <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1NXz4XatiXXagOFbX_120x120.jpg" /></a>
+        </dd>
+       <dd>
+           <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1NXz4XatiXXagOFbX_120x120.jpg" /></a>
+       </dd>
+       <dd>
+           <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1NXz4XatiXXagOFbX_120x120.jpg" /></a>
+       </dd>
+        <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2gtaMXexaXXXXXXXX_!!379424083.jpg_120x120.jpg" /></a>
+        </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2gtaMXexaXXXXXXXX_!!379424083.jpg_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2gtaMXexaXXXXXXXX_!!379424083.jpg_120x120.jpg" /></a>
+       </dd>
+        <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2ctl8XdJcXXXXXXXX_!!353026386.jpg_120x120.jpg" /></a>
+        </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2ctl8XdJcXXXXXXXX_!!353026386.jpg_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2ctl8XdJcXXXXXXXX_!!353026386.jpg_120x120.jpg" /></a>
+       </dd>
+       </dl>
+      </li>
+  <!-- 
+     <li>
+       <span></span>
+       <dl>
+         <dt></dt>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2ctl8XdJcXXXXXXXX_!!353026386.jpg_120x120.jpg" /></a>
+       </dd>
+       <dd>
+         <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2ctl8XdJcXXXXXXXX_!!353026386.jpg_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2ctl8XdJcXXXXXXXX_!!353026386.jpg_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img03.taobaocdn.com/bao/uploaded/i3/18154030473760518/T1zFM6FnlbXXXXXXXX_!!0-item_pic.jpg_100x100xz" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://gtms01.alicdn.com/tps/i1/T1geIUFjRnXXcxTSUh-180-130.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img02.taobaocdn.com/imgextra/i2/15025027982645612/T2v3dkXxJaXXXXXXXX_!!853595025-0-cs-!CS.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img03.taobaocdn.com/imgextra/i3/81478817/T2CztlXv8XXXXXXXXX_!!81478817.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img04.taobaocdn.com/imgextra/i4/11758028446335165/T2Ie79Xm8aXXXXXXXX_!!1089441758-0-cs-!CS.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img03.taobaocdn.com/tps/i3/T1SlwsXndaXXckjTg3-102-50.png" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2ebitXa8cXXXXXXXX_!!755579902.png_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1opf.XfJXXXcUQpbX_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T17MfMXnNbXXceEzHy-500-250.jpg_120x120.jpg" /></a>
+       </dd>
+        <dd>
+           <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1HZb1XlljXXagOFbX_120x120.jpg" /></a>
+        </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1HZb1XlljXXagOFbX_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1HZb1XlljXXagOFbX_120x120.jpg" /></a>
+       </dd>
+        <dd>
+           <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1NXz4XatiXXagOFbX_120x120.jpg" /></a>
+        </dd>
+       <dd>
+           <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1NXz4XatiXXagOFbX_120x120.jpg" /></a>
+       </dd>
+       <dd>
+           <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1NXz4XatiXXagOFbX_120x120.jpg" /></a>
+       </dd>
+        <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2gtaMXexaXXXXXXXX_!!379424083.jpg_120x120.jpg" /></a>
+        </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2gtaMXexaXXXXXXXX_!!379424083.jpg_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2gtaMXexaXXXXXXXX_!!379424083.jpg_120x120.jpg" /></a>
+       </dd>
+        <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2ctl8XdJcXXXXXXXX_!!353026386.jpg_120x120.jpg" /></a>
+        </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2ctl8XdJcXXXXXXXX_!!353026386.jpg_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2ctl8XdJcXXXXXXXX_!!353026386.jpg_120x120.jpg" /></a>
+       </dd>
+       </dl>
+     </li>
+     <li>
+       <span></span>
+       <dl>
+         <dt></dt>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1HZb1XlljXXagOFbX_120x120.jpg" /></a>
+       </dd>
+       <dd>
+         <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1HZb1XlljXXagOFbX_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1HZb1XlljXXagOFbX_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1HZb1XlljXXagOFbX_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://gtms01.alicdn.com/tps/i1/T1geIUFjRnXXcxTSUh-180-130.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img02.taobaocdn.com/imgextra/i2/15025027982645612/T2v3dkXxJaXXXXXXXX_!!853595025-0-cs-!CS.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img03.taobaocdn.com/imgextra/i3/81478817/T2CztlXv8XXXXXXXXX_!!81478817.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img04.taobaocdn.com/imgextra/i4/11758028446335165/T2Ie79Xm8aXXXXXXXX_!!1089441758-0-cs-!CS.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img03.taobaocdn.com/tps/i3/T1SlwsXndaXXckjTg3-102-50.png" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2ebitXa8cXXXXXXXX_!!755579902.png_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1opf.XfJXXXcUQpbX_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T17MfMXnNbXXceEzHy-500-250.jpg_120x120.jpg" /></a>
+       </dd>
+        <dd>
+           <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1HZb1XlljXXagOFbX_120x120.jpg" /></a>
+        </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1HZb1XlljXXagOFbX_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1HZb1XlljXXagOFbX_120x120.jpg" /></a>
+       </dd>
+        <dd>
+           <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1NXz4XatiXXagOFbX_120x120.jpg" /></a>
+        </dd>
+       <dd>
+           <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1NXz4XatiXXagOFbX_120x120.jpg" /></a>
+       </dd>
+       <dd>
+           <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T1NXz4XatiXXagOFbX_120x120.jpg" /></a>
+       </dd>
+        <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2gtaMXexaXXXXXXXX_!!379424083.jpg_120x120.jpg" /></a>
+        </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2gtaMXexaXXXXXXXX_!!379424083.jpg_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2gtaMXexaXXXXXXXX_!!379424083.jpg_120x120.jpg" /></a>
+       </dd>
+        <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2ctl8XdJcXXXXXXXX_!!353026386.jpg_120x120.jpg" /></a>
+        </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2ctl8XdJcXXXXXXXX_!!353026386.jpg_120x120.jpg" /></a>
+       </dd>
+       <dd>
+          <a href="javascript:;"><img src="http://img.taobaocdn.com/bao/uploaded/T2ctl8XdJcXXXXXXXX_!!353026386.jpg_120x120.jpg" /></a>
+       </dd>
+       </dl>
+       -->
+     </li>
+     
+    </ul>
+    </div>
+  </div>
+<!--right end--> 
+<!--right-->
+  <div class="bar-wpr bar-wpr-two">
+      <a id="BarRight" href="javascript:;" class="bar-right">
+        <img src="http://img03.taobaocdn.com/imgextra/i3/1761495540/T2u9mMXkJbXXXXXXXX_!!1761495540.jpg_q90.jpg">
+      </a>
+  </div>
+<!--right end-->
+</div>
+ <div class="wp2 " id="crazy">
+ <h4 class="lasth4">最后疯狂</h4>
+ <div class="last">
+    <div class="products ">
+  <div class="cover"></div>
+   <a class="top" href="javascript:;"><img src="http://gtms02.alicdn.com/tps/i2/T1.ULeFphaXXX0RPzy-470-240.jpg" /></a>
+   <div class="bm">
+    <div class="name"><a href="javascript:;">春夏最潮单品专场专场</a></div>
+    <span class="dic"><span class="salebg2">3.5</span>折起</span>
+    <span class="timer" time start="2014-3-18 0:0:0" end="2014-3-21 17:22:00">12天大大大23</span>
+   </div>
+  </div>
+  <div class="products">
+   <div class="cover"></div>
+   <a class="top" href="javascript:;"><img src="http://gtms02.alicdn.com/tps/i2/T10AWeFpNfXXX0RPzy-470-240.jpg" /></a>
+   <div class="bm">
+    <div class="name"><a href="javascript:;">简约现代白衬衫</a></div>
+    <span class="dic"><span class="salebg2">3.5</span>折起</span>
+    <span class="timer" time start="2014-3-18 0:0:0" end="2014-3-21 17:22:00">12天大大大23</span>
+   </div>
+  </div>
+  <div class="products">
+    <div class="cover"></div>
+   <a class="top" href="javascript:;"><img src="http://img02.taobaocdn.com/imgextra/i2/1023696028/T21xvUXz4XXXXXXXXX-1023696028.jpg_q90.jpg" /></a>
+   <div class="bm">
+    <div class="name"><a href="javascript:;">简约现代白衬衫</a></div>
+    <span class="dic"><span class="salebg2">3.5</span>折起</span>
+    <span class="timer" time start="2014-3-18 0:0:0" end="2014-3-21 17:22:00">12天大大大23</span>
+   </div>
+  </div>
+  <div class="products">
+       <div class="cover"></div>
+     <a class="top" href="javascript:;"><img src="http://img01.taobaocdn.com/imgextra/i1/1653734047/T2gmshXiFbXXXXXXXX-1653734047.jpg_q90.jpg" /></a>
+     <div class="bm">
+      <div class="name"><a href="javascript:;">简约现代白衬衫</a></div>
+      <span class="dic"><span class="salebg2">3.5</span>折起</span>
+      <span class="timer" time start="2014-3-18 0:0:0" end="2014-3-21 17:22:00">12天大大大23</span>
+     </div>
+  </div>
+  <div class="products">
+       <div class="cover"></div>
+     <a class="top" href="javascript:;"><img src="http://img01.taobaocdn.com/imgextra/i1/1818112088/T25IPvXixbXXXXXXXX_!!1818112088.jpg_q90.jpg" /></a>
+     <div class="bm">
+      <div class="name"><a href="javascript:;">简约现代白衬衫</a></div>
+      <span class="dic"><span class="salebg2">3.5</span>折起</span>
+      <span class="timer" time start="2014-3-18 0:0:0" end="2014-3-21 17:22:00">12天大大大23</span>
+     </div>
+  </div>
+  <div class="products">
+       <div class="cover"></div>
+     <a class="top" href="javascript:;"><img src="http://img01.taobaocdn.com/imgextra/i1/1095258949/T2x9H0XyXXXXXXXXXX-1095258949.jpg_q90.jpg" /></a>
+     <div class="bm">
+      <div class="name"><a href="javascript:;">简约现代白衬衫</a></div>
+      <span class="dic"><span class="salebg2">3.5</span>折起</span>
+      <span class="timer" time start="2014-3-18 0:0:0" end="2014-3-21 17:22:00">12天大大大23</span>
+     </div>
+  </div>
+ </div>
+ </div>
+<!---->
+
+<div class="wp2 " >
+ <h4 class="lasth4">即将售出</h4>
+ <div class="last">
+    <div class="products failure">
+    <div class="cover"></div>
+   <a class="top" href="javascript:;"><img src="http://img02.taobaocdn.com/imgextra/i2/923605416/T2kJG2XcNcXXXXXXXX-923605416.gif" /></a>
+   <div class="bm">
+    <div class="name"><a href="javascript:;">nike专场</a></div>
+    <!-- <span class="dic"><span class="salebg2">3.5</span>折起</span>
+    <span class="timer" time start="2014-3-18 0:0:0" end="2014-3-21 17:22:00">12天大大大23</span> -->
+   </div>
+  </div>
+  <div class="products failure">
+      <div class="cover"></div>
+   <a class="top" href="javascript:;"><img src="http://img01.taobaocdn.com/imgextra/i1/1591071700/T2z1jxXxBXXXXXXXXX_!!1591071700.jpg" /></a>
+   <div class="bm">
+    <div class="name"><a href="javascript:;">nike专场</a></div>
+    <!-- <span class="dic"><span class="salebg2">3.5</span>折起</span>
+    <span class="timer" time start="2014-3-18 0:0:0" end="2014-3-21 17:22:00">12天大大大23</span> -->
+   </div>
+  </div>
+  <div class="products failure">
+      <div class="cover"></div>
+   <a class="top" href="javascript:;"><img src="http://img02.taobaocdn.com/imgextra/i2/1591071700/T2tkTwXDJXXXXXXXXX_!!1591071700.jpg" /></a>
+   <div class="bm">
+    <div class="name"><a href="javascript:;">nike专场</a></div>
+    <!-- <span class="dic"><span class="salebg2">3.5</span>折起</span>
+    <span class="timer" time start="2014-3-18 0:0:0" end="2014-3-21 17:22:00">12天大大大23</span> -->
+   </div>
+  </div>
+  <div class="products failure">
+      <div class="cover"></div>
+   <a class="top" href="javascript:;"><img src="http://img03.taobaocdn.com/imgextra/i3/923605416/T2WWYIXdlbXXXXXXXX-923605416.jpg" /></a>
+   <div class="bm">
+    <div class="name"><a href="javascript:;">nike专场</a></div>
+    <!-- <span class="dic"><span class="salebg2">3.5</span>折起</span>
+    <span class="timer" time start="2014-3-18 0:0:0" end="2014-3-21 17:22:00">12天大大大23</span> -->
+   </div>
+  </div>
+  <div class="products failure">
+      <div class="cover"></div>
+   <a class="top" href="javascript:;"><img src="http://img.taobaocdn.com/tps/i2/T1kJKaFxteXXb1upjX.jpg" /></a>
+   <div class="bm">
+    <div class="name"><a href="javascript:;">nike专场</a></div>
+    <!-- <span class="dic"><span class="salebg2">3.5</span>折起</span>
+    <span class="timer" time start="2014-3-18 0:0:0" end="2014-3-21 17:22:00">12天大大大23</span> -->
+   </div>
+  </div>
+  <div class="products failure">
+      <div class="cover"></div>
+   <a class="top" href="javascript:;"><img src="http://img01.taobaocdn.com/imgextra/i1/1591071700/T2ZQnxXrNXXXXXXXXX_!!1591071700.jpg" /></a>
+   <div class="bm">
+    <div class="name"><a href="javascript:;">nike专场</a></div>
+    <!-- <span class="dic"><span class="salebg2">3.5</span>折起</span>
+    <span class="timer" time start="2014-3-18 0:0:0" end="2014-3-21 17:22:00">12天大大大23</span> -->
+   </div>
+  </div>
+ </div>
+ </div>
+ 
+ <!---->
+ <div class="fix-bar" id="floatBar">
+  <dl id="hotBars">
+    <dt class="sohot">最近热卖</dt>
+  <dd class="clothing">
+   <a href="javascript:;">服装</a>
+  </dd>
+  <dd class="huazhuang">
+     <a href="javascript:;">化妆品</a>
+  </dd>
+  <dd class="xiebao">
+     <a href="javascript:;">鞋包</a>
+  </dd>
+  <dd class="shipin">
+     <a href="javascript:;">饰品</a>
+  </dd>
+  <dd class="muying">
+      <a href="javascript:;">母婴</a>
+  </dd>
+  <dd class="jiaju">
+     <a href="javascript:;">家居</a>
+  </dd>
+  <dd class="food">
+     <a href="javascript:;">食品</a>
+  </dd>
+  <dd class="baihuo">
+     <a href="javascript:;">百货</a>
+  </dd>
+  </dl>
+  <dl class="mb5">
+    <dt class="lasted">
+   <a href="javascript:;">最后疯抢</a>
+  </dt>
+  </dl>
+  <!--
+   <dl>
+    <dt class="coming">
+   <a href="javascript:;">即将推出</a>
+  </dt>
+  </dl>
+  -->
+  <dl>
+    <dt class="wc-gotop">
+   <a id="Tao_Goto_Top" href="javascript:;">返回顶部</a>
+  </dt>
+  </dl>
+ </div>
+ <div class="block30 "></div>
+ <!--footer-->
+ <div class="footer">
+    <div class="footer-links">
+      <a class="item" target="_blank" href="http://old.b5m.com/o/about">关于帮5买</a>|<a class="item" target="_blank" href="http://old.b5m.com/o/about/contact">联系我们</a>|<a class="item" target="_blank" href="http://old.b5m.com/o/about/business">合作商家</a>|<a class="item" target="_blank" href="http://old.b5m.com/o/about/links">友情链接</a>|<a class="item" target="_blank" href="http://old.b5m.com/o/about/job">加入我们</a>|<a class="item" target="_blank" href="http://app.b5m.com/index.html">移动应用</a>
+    </div>
+    <div class="footer-copyright">Copyright © 2011-2013 B5M.COM. All rights reserved. Powered by B5Msoft Co.,Ltd. ICP证：沪ICP备11034776号</div>
+    <div class="footer-public">
+            <a target="_blank" href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20120620142952978"><img src="http://staticcdn.b5m.com/static/images/common/shgs.gif" alt="上海工商"></a>
+            <a target="_blank" href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20120620142952978"><img src="http://staticcdn.b5m.com/static/images/common/cxwz.png" alt="诚信网站"></a>
+    </div>
+  </div>
+<!--footer end-->
+</body>
+<script src="http://staticcdn.b5m.com/static/scripts/public/copyright.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://staticcdn.b5m.com/scripts/common/jquery-1.9.1.min.js"></script>
+<script id="b5m-libs" type="text/javascript" src="http://staticcdn.b5m.com/static/public/sea-modules/dist/libs.js" rootPath="http://staticcdn.b5m.com/static/public/sea-modules/dist" version="20150421094218"></script>
+<script type="text/javascript" src="http://staticcdn.b5m.com/scripts/common/common.js"></script>
+<script type="text/javascript" src="http://staticcdn.b5m.com/proj/tejia/js/countTime_0549ffc.js"></script>
+<script type="text/javascript" src="http://staticcdn.b5m.com/proj/tejia/js/taov2_41152eb.js"></script>
+<script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
+
+</html>

@@ -1,0 +1,145 @@
+<div class="wc-detail cf">
+<!--@左边块 s-->
+<div class="wc-detail-l">
+<div class="crumbs">
+    <a href="/">首页</a>
+    <span>></span>
+    <span >{{goodsDetail.name}}</span>
+</div>
+
+
+<div class="detail-view cf">
+    <a class="view-img" target="_blank" href="{{goodsDetail.link}}"><img  src="{{goodsDetail.index_image}}"/> </a>
+    <div class="view-text">
+        <h2 class="caption">{{goodsDetail.name}}</h2>
+        <p class="hr"></p>
+        <div class="panels cf" id="panelsTop">
+            <a class="direct-buy" target="_blank" href="{{goodsDetail.link}}">自行购买>></a>
+            <div class="price">
+                <span class="def-price">￥{{goodsDetail.price}}</span>
+                <del class="">￥{{goodsDetail.old_price}}</del>
+                <span class="discount">{{discount-helper goodsDetail.price goodsDetail.old_price}}折</span>
+            </div>
+
+            <!--
+            <div class="btn-buy-wrap">
+                <a class="btn-buy" href="#">立即购买</a>
+                <a href="#" class="attach">免费兑换</a><a href="#" class="attach">帮我买</a>
+            </div>
+            -->
+            <div class="howmany">已有<em class="num">{{goodsDetail.sales}}</em>个人在抢购</div>
+        </div>
+        <div class="btn-buy-wrap cf">
+            <a class="btn-buy" href="{{goodsDetail.exchange_link}}" target="_blank">帮钻兑换</a>
+            <a href="{{goodsDetail.url}}" target="_blank" class="btn-SellAbroad"><span></span>帮我买</a>
+        </div>
+        <p class="hr"></p>
+        <div class="count-time" >
+            <em>还剩:</em>
+            <span time start="{{goodsDetail.create_time}}" end="{{goodsDetail.over_time}}"></span>
+        </div>
+    </div>
+</div>
+<!--@商品切换 s-->
+<div class="view-introduce">
+<div class="convert-wrap" id="bannerTop">
+    <ul class="convert">
+        {{#if goodsDetail.content}}
+         <li class="current" scrollTo="detail_show">商品详情</li>
+         <li scrollTo="invtroduce_show">同类商品</li>
+        {{else}}
+
+         <li class="current" scrollTo="invtroduce_show">同类商品</li>
+        {{/if}}
+
+    </ul>
+    <div class="un-tab">
+        <a href="{{goodsDetail.url}}" target="_blank" data-attr="100803" class="bk-btn">帮我买</a>
+        <a href="{{goodsDetail.exchange_link}}" target="_blank" data-attr="102002" class="bk-btn orange">帮钻兑换</a>
+    </div>
+</div>
+{{#if goodsDetail.content}}
+<h3 class="cap">商品详情</h3>
+<div class="invtroduce-detail" id="detail_show" >
+
+    {{{html goodsDetail.content}}}
+
+
+</div>
+{{/if}}
+
+{{#if goodsDetail.content}}
+    <h3 class="cap">同类商品</h3>
+<div class="invtroduce-detail no"  id="invtroduce_show">
+{{else}}
+<div class="invtroduce-detail no" id="invtroduce_show">
+{{/if}}
+    <ul class="deatil-list cf">
+
+        {{#each recommandGoodsList.similar}}
+
+        <li>
+            <a class="top-link" target="_blank" href="/detail/{{id}}" title="{{name}}"><img  src="{{index_image}}" /> </a>
+            <p class="dir name"><a target="_blank" href="/detail/{{id}}" title="{{name}}">{{name}}</a></p>
+            <p class="dir">
+                <span class="price">￥<em class="num">{{price}}</em></span>
+                <span class="discount">{{discount-helper price old_price}}折</span>
+                <span class="howmany">{{sales}}人已购买</span>
+            </p>
+            <p class="dir">
+                <del>￥<em class="num">{{old_price}}</em></del>
+            </p>
+        </li>
+
+        {{/each}}
+    </ul>
+
+
+</div>
+<div class="cf"></div>
+<div class="bm-buy" id="panelsBottom">
+    <span class="howmany">已有<em class="num">{{goodsDetail.sales}}</em>人抢购</span>
+    <del>￥<em class="num">{{goodsDetail.old_price}}</em></del>
+    <span class="discount">{{discount-helper goodsDetail.price goodsDetail.old_price}}折</span>
+    <span class="def-price">￥{{goodsDetail.price}}</span>
+    <a class="btn-buy" target="_blank" href="{{goodsDetail.url}}">帮我买</a>
+</div>
+</div>
+<!--@商品切换 e-->
+</div>
+<!--@左边块 e-->
+<!--@右边块 s-->
+<div class="wc-detail-r">
+    <h3 class="title">精品推荐</h3>
+    <ul class="boutique">
+
+        {{#each recommandGoodsList.recommand}}
+        <li>
+            <a class="top-link" title="{{name}}" target="_blank" href="/detail/{{id}}"><img  src="{{index_image}}" /> </a>
+            <p class="dir name"><a title="{{name}}" target="_blank" href="/detail/{{id}}">{{name}}</a></p>
+            <p class="dir">
+                <span class="price">￥<em class="num">{{price}}</em></span>
+                <span class="discount">{{discount-helper price old_price}}折</span>
+                <!--<span class="howmany">{{sales}}人已购买</span>-->
+                <a class="btn-buy" target="_blank" href="{{buy_link}}">立即购买</a>
+            </p>
+            <p class="dir">
+                <del>￥<em class="num">{{old_price}}</em></del>
+            </p>
+        </li>
+        {{/each}}
+
+    </ul>
+</div>
+<!--@右边块 e-->
+</div>
+
+
+    {{#contentFor 'pageScripts'}}
+        <script type="text/javascript">
+            $(function(){
+
+                taoInit.detail();
+            });
+        </script>
+    {{/contentFor}}

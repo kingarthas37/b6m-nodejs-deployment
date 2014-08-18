@@ -1,0 +1,112 @@
+<!--
+<div class="wc-top-wp">
+ <div class="top-show">
+   <div class="top-showin">
+     <a href="{{channelBanner.link}}"><img src="{{channelBanner.image}}"/></a>
+   </div>
+ </div>
+</div>
+-->
+<!-- -->
+<div class="wp cf" id="autoTop">
+
+
+ <div class="wc-item-wpl">
+
+
+   {{#each getBrandFloorList}}
+
+    <div class="wc-item-wp" data-id="{{floor.id}}">
+ <div class="wc-item-hd">
+ <!--<span class="numb-f">{{floor.id}}F</span>--> <!--<span class="green">最近热卖</span>/--> {{floor.name}}
+ </div>
+
+        {{#each brand}}
+        <div class="wc-items">
+            <div class="detail">
+                <a class="icon" href="{{brand_url}}" target="_blank" ><img src="{{logo}}"/></a>
+               <!-- <div class="brief">{{brand_name}}</div>-->
+
+                <div class="infos "><a class="a" href="{{brand_url}}" target="_blank">{{brand_name}}</a></div>
+                <div class="disc"><span class="salebg2">{{discount}}</span></div>
+                <div class="timer" time start="{{gettime}}" end="{{gettime end_time}}"><em></em><dfn>00</dfn>天<dfn>00</dfn>时<dfn>00</dfn>分<dfn>00</dfn>秒</div>
+            </div>
+            <a target="_blank" class="img" href="{{brand_url}}"><img src="{{brand_img}}"/></a>
+        </div>
+        {{/each}}
+
+      </div>
+   {{/each}}
+ </div>
+
+
+
+<div class="wc-item-wpr">
+
+    <a href="/channel/1" id="BarRight">
+        <img src="{{RESOURCE_BASE_URL}}/images/brand-banner.jpg" />
+    </a>
+
+
+    <div class="bar-wpr">
+    <div class="bar-slider" id="saleTabs">
+    <ul class="hd" >
+    <li class="">
+        <span>今日最大牌</span>
+        <dl class="cf">
+
+            {{#each bigBrand}}
+            <dd>
+                <a target="_blank" href="{{brand_url}}"><img src="{{logo}}" /></a>
+            </dd>
+            {{/each}}
+
+        </dl>
+    </li>
+    </ul>
+    </div>
+    </div>
+
+
+    <!--<div class="bar-wpr bar-wpr-two">
+        <a id="BarRight" href="javascript:;" class="bar-right">
+            <img src="http://img03.taobaocdn.com/imgextra/i3/1761495540/T2u9mMXkJbXXXXXXXX_!!1761495540.jpg_q90.jpg">
+        </a>
+    </div>-->
+
+</div>
+</div>
+
+
+
+ <div class="wp2 " id="crazy">
+ <h4 class="lasth4">最后疯狂</h4>
+ <div class="last">
+
+  {{#each getCountdownBrandList}}
+  <div class="products ">
+  <div class="cover"></div>
+   <a class="top" target="_blank" href="{{brand_url}}"><img src="{{brand_img}}" /></a>
+   <div class="bm">
+    <div class="name"><a href="javascript:;">{{brand_name}}</a></div>
+    <span class="dic"><span class="salebg2">{{discount}}</span></span>
+    <span class="timer" time start="{{gettime}}" end="{{gettime end_time}}"><em></em><dfn>00</dfn>天<dfn>00</dfn>时<dfn>00</dfn>分<dfn>00</dfn>秒</span>
+   </div>
+  </div>
+  {{/each}}
+
+ </div>
+ </div>
+
+
+
+
+<br/>
+
+{{#contentFor 'pageScripts'}}
+        <script>
+            $(function(){
+                taoInit.brand();
+            });
+        </script>
+{{/contentFor}}
