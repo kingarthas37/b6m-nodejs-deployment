@@ -5,14 +5,14 @@ b6m-nodejs-deployment
 
 线上预览：[http://tejia.b5m.com](http://tejia.b5m.com)
 
-*执行npm install安装所有模块
+*执行npm install安装所有模块  
 *执行node start运行项目(port:3003)
 
 ###核心模块:
-*使用node-express搭建web框架
-*使用node-handlebars模板引擎
-*使用[fis](http://fis.baidu.com/)搭建前端资源部署
-*使用node-async进行数据请求异步回调流程控制
+*使用node-express搭建web框架  
+*使用node-handlebars模板引擎  
+*使用[fis](http://fis.baidu.com/)搭建前端资源部署  
+*使用node-async进行数据请求异步回调流程控制  
 *使用node-memcached进行缓存管理
 
 ###工作流程：
